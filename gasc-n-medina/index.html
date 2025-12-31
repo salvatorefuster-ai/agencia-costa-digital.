@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GASCÓN MEDINA - Propuesta de Rediseño</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#1e293b', accent: '#eab308' }, // Slate & Gold por defecto
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur shadow-sm py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="font-serif font-bold text-xl uppercase tracking-widest text-primary">GASCÓN MEDINA</div>
+        <a href="undefined" target="_blank" class="text-sm font-bold text-red-500 hover:underline">Ver Web Original</a>
+    </nav>
+
+    <header class="relative h-[80vh] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+            <span class="text-accent font-bold tracking-widest uppercase text-sm mb-4 block">Experiencia Premium</span>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">Asesoría y Gestoría en Benidorm</h1>
+            <p class="text-xl text-gray-200 mb-10 font-light max-w-2xl mx-auto">Asesoría en Benidorm para Empresas, autónomos y particulares. ✅ Gestión de nóminas ✅ Contrataciones ✅ Libros contables ✅ Trámites en Hacienda ✅ Tributación</p>
+            <button class="bg-accent text-gray-900 px-8 py-4 font-bold rounded-sm uppercase tracking-wider hover:bg-yellow-400 transition">Contactar Ahora</button>
+        </div>
+    </header>
+
+    <div class="fixed bottom-0 w-full bg-black/90 text-white py-2 text-center text-xs uppercase tracking-widest z-50">
+        Demo Generada por Benidorm-Evolucion 
+    </div>
+</body>
+</html>

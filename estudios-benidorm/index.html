@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudios Benidorm | Rediseño Exclusivo 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 
+                        brand: {
+                            light: '#f8fafc',
+                            DEFAULT: '#0f172a',
+                            dark: '#020617',
+                            accent: '#c5a358'
+                        }
+                    },
+                    fontFamily: { 
+                        sans: ['Outfit', 'sans-serif'], 
+                        serif: ['Playfair Display', 'serif'] 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes reveal { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .reveal { animation: reveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
+        .hero-gradient { background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.9)); }
+        .luxury-card { transition: all 0.4s ease; border: 1px solid rgba(0,0,0,0.05); }
+        .luxury-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3); border-color: #c5a358; }
+    </style>
+</head>
+<body class="bg-brand-light font-sans text-brand-DEFAULT antialiased">
+
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-[100] glass-nav border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-brand-dark flex items-center justify-center text-brand-accent font-serif text-2xl font-bold rounded-lg">E</div>
+                <div class="hidden md:block">
+                    <div class="font-serif font-bold text-xl leading-none">Estudios Benidorm</div>
+                    <div class="text-[10px] uppercase tracking-[0.3em] text-brand-accent mt-1">Estándar de Excelencia</div>
+                </div>
+            </div>
+            <div class="hidden lg:flex gap-10 text-xs font-bold uppercase tracking-widest text-slate-500">
+                <a href="#about" class="hover:text-brand-accent transition">Conócenos</a>
+                <a href="#services" class="hover:text-brand-accent transition">Servicios</a>
+                <a href="#experience" class="hover:text-brand-accent transition">Experiencia</a>
+                <a href="#contact" class="hover:text-brand-accent transition">Contacto</a>
+            </div>
+            <button class="bg-brand-dark text-white px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition shadow-lg">
+                Reservar Cita
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-slate-900"></div>
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="relative z-10 text-center px-6 max-w-5xl">
+            <div class="inline-block border border-brand-accent/50 px-6 py-2 rounded-full text-brand-accent text-xs font-bold uppercase tracking-[0.4em] mb-10 backdrop-blur-md reveal">
+                Luxury Lifestyle
+            </div>
+            <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl text-white font-bold mb-8 leading-tight reveal delay-1">
+                Estudios Benidorm
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 font-light max-w-2xl mx-auto mb-12 leading-relaxed reveal delay-2">
+                Excelencia digital rediseñada.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center reveal delay-3">
+                <a href="#about" class="bg-brand-accent text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition duration-500 shadow-2xl">
+                    Saber Más
+                </a>
+                <a href="undefined" target="_blank" class="border border-white/40 text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest hover:bg-white/10 transition backdrop-blur-md">
+                    Web Actual
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll mouse -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-white/40">
+            <div class="w-[2px] h-12 bg-gradient-to-b from-brand-accent to-transparent"></div>
+            <span class="text-[10px] uppercase tracking-widest">Scroll</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div class="relative">
+                    <div class="aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-12 -right-12 bg-brand-dark text-white p-12 rounded-2xl shadow-2xl hidden md:block max-w-xs">
+                        <div class="text-brand-accent text-4xl font-serif italic mb-4">"Calidad"</div>
+                        <p class="text-sm text-slate-400 leading-relaxed italic">"Nuestra misión es superar expectativas, transformando cada interacción en un momento de lujo inolvidable."</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs mb-6">Sobre la Marca</div>
+                    <h2 class="font-serif text-5xl md:text-6xl font-bold mb-10 leading-tight">Tradición que mira hacia el futuro.</h2>
+                    <div class="space-y-8 text-lg text-slate-600 font-light leading-relaxed">
+                        <p>En <strong>Estudios Benidorm</strong>, entendemos que el verdadero lujo no es solo lo que se ve, sino lo que se siente. Llevamos años perfeccionando el arte de servir a los clientes más exigentes de Benidorm.</p>
+                        <p>Hemos evolucionado. Esta nueva identidad digital es el reflejo de nuestro compromiso con la innovación tecnológica, sin perder nunca la esencia humana que nos define.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-12 mt-16 pt-16 border-t border-slate-100">
+                        <div>
+                            <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Presencia</div>
+                            <div class="text-3xl font-serif font-bold italic">Benidorm & World</div>
+                        </div>
+                        <div>
+                            <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Servicio</div>
+                            <div class="text-3xl font-serif font-bold italic">Top Tier 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-accent/5 blur-[150px] rounded-full"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs mb-6">Excelencia en Detalle</div>
+            <h2 class="font-serif text-5xl md:text-7xl font-bold mb-20 leading-tight">Servicios Exclusivos</h2>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                
+                <div class="bg-white/5 border border-white/10 p-12 rounded-2xl backdrop-blur-sm group hover:bg-white hover:text-brand-dark transition duration-700 text-left">
+                    <div class="mb-8 p-4 bg-brand-accent/20 rounded-xl inline-block group-hover:bg-brand-dark group-hover:text-white transition duration-500">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-3xl font-bold mb-6">Propuesta Premium 1</h3>
+                    <p class="text-slate-400 group-hover:text-brand-dark/70 text-lg font-light leading-relaxed mb-8">Un enfoque holístico diseñado para satisfacer los objetivos más ambiciosos con precisión impecable.</p>
+                    <div class="w-12 h-[2px] bg-brand-accent group-hover:bg-brand-dark transition duration-500"></div>
+                </div>
+                
+                <div class="bg-white/5 border border-white/10 p-12 rounded-2xl backdrop-blur-sm group hover:bg-white hover:text-brand-dark transition duration-700 text-left">
+                    <div class="mb-8 p-4 bg-brand-accent/20 rounded-xl inline-block group-hover:bg-brand-dark group-hover:text-white transition duration-500">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-3xl font-bold mb-6">Propuesta Premium 2</h3>
+                    <p class="text-slate-400 group-hover:text-brand-dark/70 text-lg font-light leading-relaxed mb-8">Un enfoque holístico diseñado para satisfacer los objetivos más ambiciosos con precisión impecable.</p>
+                    <div class="w-12 h-[2px] bg-brand-accent group-hover:bg-brand-dark transition duration-500"></div>
+                </div>
+                
+                <div class="bg-white/5 border border-white/10 p-12 rounded-2xl backdrop-blur-sm group hover:bg-white hover:text-brand-dark transition duration-700 text-left">
+                    <div class="mb-8 p-4 bg-brand-accent/20 rounded-xl inline-block group-hover:bg-brand-dark group-hover:text-white transition duration-500">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-3xl font-bold mb-6">Propuesta Premium 3</h3>
+                    <p class="text-slate-400 group-hover:text-brand-dark/70 text-lg font-light leading-relaxed mb-8">Un enfoque holístico diseñado para satisfacer los objetivos más ambiciosos con precisión impecable.</p>
+                    <div class="w-12 h-[2px] bg-brand-accent group-hover:bg-brand-dark transition duration-500"></div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Experience -->
+    <section id="experience" class="py-32 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-end mb-20 gap-10">
+            <div class="max-w-xl">
+                <div class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs mb-6">Galería Visual</div>
+                <h2 class="font-serif text-5xl md:text-6xl font-bold leading-tight">Momentos de Inspiración</h2>
+            </div>
+            <button class="border border-brand-dark px-10 py-4 font-bold uppercase tracking-widest text-xs hover:bg-brand-dark hover:text-white transition duration-500">
+                Ver Todo el Portfolio
+            </button>
+        </div>
+        
+        <div class="flex gap-8 px-6 animate-[scroll_40s_linear_infinite] hover:pause">
+             
+                <div class="min-w-[400px] h-[500px] rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition duration-1000">
+                    <img src="https://source.unsplash.com/random/800x1000?luxury,city&sig=1" class="w-full h-full object-cover">
+                </div>
+             
+                <div class="min-w-[400px] h-[500px] rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition duration-1000">
+                    <img src="https://source.unsplash.com/random/800x1000?luxury,city&sig=2" class="w-full h-full object-cover">
+                </div>
+             
+                <div class="min-w-[400px] h-[500px] rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition duration-1000">
+                    <img src="https://source.unsplash.com/random/800x1000?luxury,city&sig=3" class="w-full h-full object-cover">
+                </div>
+             
+                <div class="min-w-[400px] h-[500px] rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition duration-1000">
+                    <img src="https://source.unsplash.com/random/800x1000?luxury,city&sig=4" class="w-full h-full object-cover">
+                </div>
+             
+                <div class="min-w-[400px] h-[500px] rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition duration-1000">
+                    <img src="https://source.unsplash.com/random/800x1000?luxury,city&sig=5" class="w-full h-full object-cover">
+                </div>
+             
+                <div class="min-w-[400px] h-[500px] rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition duration-1000">
+                    <img src="https://source.unsplash.com/random/800x1000?luxury,city&sig=6" class="w-full h-full object-cover">
+                </div>
+             
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-32 bg-brand-light">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="text-brand-accent text-6xl font-serif mb-12">"</div>
+            <p class="text-3xl md:text-4xl font-serif italic text-slate-700 leading-relaxed mb-12">
+                "La transformación digital de Estudios Benidorm no solo ha modernizado su imagen, ha redefinido el significado de calidad en todo Benidorm. Una propuesta simplemente excepcional."
+            </p>
+            <div class="flex items-center justify-center gap-6">
+                <div class="w-16 h-16 rounded-full bg-slate-300 overflow-hidden">
+                    <img src="https://i.pravatar.cc/150?u=client" class="w-full h-full object-cover">
+                </div>
+                <div class="text-left">
+                    <div class="font-bold uppercase tracking-widest text-sm">Crítico de Diseño</div>
+                    <div class="text-brand-accent text-xs">Agencia Costa Digital</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="contact" class="py-32 relative flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-brand-dark z-0">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" class="w-full h-full object-cover opacity-30 scale-110">
+            <div class="absolute inset-0 bg-brand-dark/80"></div>
+        </div>
+        <div class="relative z-10 text-center text-white px-6">
+            <h2 class="font-serif text-5xl md:text-8xl font-bold mb-10">Evolucione Hoy</h2>
+            <p class="text-xl text-slate-300 max-w-xl mx-auto mb-12">No pierda la oportunidad de liderar su sector con la tecnología del mañana.</p>
+            <button class="bg-brand-accent text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition duration-500 shadow-2xl">
+                Solicitar Auditoría VIP
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-24 pb-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-16 mb-20 text-center md:text-left">
+                <div class="col-span-1 md:col-span-1">
+                     <div class="font-serif font-bold text-3xl mb-8">Estudios Benidorm</div>
+                     <p class="text-slate-500 text-sm leading-relaxed">El rediseño oficial Estudios Benidorm V2.0 creado por Agencia Costa Digital. Líderes en consultoría tecnológica.</p>
+                </div>
+                <div>
+                    <h4 class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-8">Navegación</h4>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-white transition">Propiedades</a></li>
+                        <li><a href="#" class="hover:text-white transition">Servicios</a></li>
+                        <li><a href="#" class="hover:text-white transition">Experiencia</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-8">Legal</h4>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-white transition">Privacidad</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cookies</a></li>
+                        <li><a href="#" class="hover:text-white transition">Aviso Legal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-8">Campaña</h4>
+                    <p class="text-slate-400 text-sm mb-6">Reciba nuestras actualizaciones premium de digitalización.</p>
+                    <div class="flex">
+                        <input type="text" placeholder="Su email" class="bg-white/5 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-brand-accent w-full text-white">
+                        <button class="bg-brand-accent px-6 py-3 text-xs font-bold uppercase">OK</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-widest text-slate-500">
+                <div>&copy; 2025 Estudios Benidorm. TODOS LOS DERECHOS RESERVADOS.</div>
+                <div class="flex items-center gap-2">
+                    REDISEÑADO POR <span class="text-white font-bold">AGENCIA COSTA DIGITAL</span>
+                    <div class="w-1 h-1 rounded-full bg-brand-accent"></div>
+                    BENIDORM, ES
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Overlay de Demo -->
+    <div class="fixed top-24 right-0 z-[110] bg-brand-accent text-white py-2 px-6 rounded-l-full shadow-2xl font-bold text-[10px] uppercase tracking-[0.2em] transform rotate-0 hover:-translate-x-2 transition duration-300 border-y border-l border-white/30">
+        Demo Propuesta V2.0
+    </div>
+
+</body>
+</html>

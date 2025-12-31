@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agencia Costa Blanca Digital | Arquitectos de Identidad Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -28,38 +28,19 @@
 <body class="antialiased selection:bg-gold selection:text-dark">
     <div class="fixed inset-0 hero-grain z-0"></div>
     <div class="lux-gradient absolute inset-0 z-0"></div>
-
     <nav class="fixed w-full z-50 px-6 py-10 md:px-12 pointer-events-none">
         <div class="max-w-screen-2xl mx-auto flex justify-between items-center pointer-events-auto">
-            <div class="font-serif font-bold text-2xl tracking-[0.2em] uppercase">
-                Costa Blanca <span class="italic text-gold font-normal">Digital</span>
-            </div>
-            <div class="hidden md:flex gap-16 text-[9px] font-bold uppercase tracking-[0.4em]">
-                <a href="#vision" class="hover:text-gold transition">Estrategia</a>
-                <a href="proyectos.html" class="text-gold">Portfolio 2025</a>
-                <a href="#contacto" class="hover:text-gold transition">Contacto</a>
-            </div>
-            <a href="mailto:hola@costablancadigital.com" class="bg-white text-dark px-10 py-4 rounded-full text-[9px] font-bold uppercase tracking-widest hover:bg-gold transition duration-500">Membresía VIP</a>
+            <div class="font-serif font-bold text-2xl tracking-[0.2em] uppercase">Costa Blanca <span class="italic text-gold font-normal font-serif">Digital</span></div>
+            <a href="proyectos.html" class="bg-gold text-white px-10 py-4 rounded-full text-[9px] font-bold uppercase tracking-widest hover:scale-105 transition duration-500">Membresía VIP</a>
         </div>
     </nav>
-
     <header class="relative min-h-screen flex items-center justify-center pt-32 px-6 overflow-hidden">
         <div class="relative z-10 text-center max-w-6xl">
-            <h1 class="reveal active font-serif text-6xl md:text-[10rem] font-bold mb-12 leading-[0.8] tracking-tight">
-                Diseño <br>
-                <span class="italic font-normal text-gold">Imbatible.</span>
-            </h1>
-            <p class="reveal active text-slate-400 text-lg md:text-3xl max-w-3xl mx-auto mb-20 font-light leading-relaxed">
-                Agencia Boutique especializada en la transformación digital de marcas que dominan el mercado de Benidorm.
-            </p>
-            <div class="reveal active flex flex-col md:flex-row justify-center gap-10">
-                <a href="proyectos.html" class="bg-gold text-white px-16 py-6 rounded-sm font-bold text-[11px] uppercase tracking-[0.4em] hover:bg-white hover:text-dark transition duration-700 shadow-2xl shadow-gold/20">
-                    Proyectos Exclusivos
-                </a>
-            </div>
+            <h1 class="reveal active font-serif text-6xl md:text-[10rem] font-bold mb-12 leading-[0.8] tracking-tight">Diseño <br> <span class="italic font-normal text-gold">Imbatible.</span></h1>
+            <p class="reveal active text-slate-400 text-lg md:text-3xl max-w-3xl mx-auto mb-20 font-light leading-relaxed">Arquitectos de identidad digital para las marcas que dominan Benidorm.</p>
+            <a href="proyectos.html" class="bg-gold text-white px-16 py-6 rounded-sm font-bold text-[11px] uppercase tracking-[0.4em] hover:bg-white hover:text-dark transition duration-700 shadow-2xl">Catálogo de Proyectos</a>
         </div>
     </header>
-
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });

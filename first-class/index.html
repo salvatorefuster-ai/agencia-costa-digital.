@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Class - Concepto Premium 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 
+                        primary: '#0f172a', 
+                        accent: '#cca43b',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: { 
+                        sans: ['Outfit', 'sans-serif'], 
+                        serif: ['Playfair Display', 'serif'] 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in { animation: fadeIn 1s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-light text-slate-800 antialiased selection:bg-accent selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass border-b border-slate-100/50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-serif font-bold text-2xl text-slate-900 tracking-tighter">First Class</div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+                <a href="#" class="hover:text-accent transition">Servicios</a>
+                <a href="#" class="hover:text-accent transition">Experiencia</a>
+                <a href="#" class="hover:text-accent transition">Nosotros</a>
+            </div>
+            <button class="bg-slate-900 text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-accent transition duration-300">
+                Reserva / Contacto
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-slate-900 z-0"></div>
+        
+        <div class="relative z-10 text-center px-6 max-w-5xl">
+            <div class="inline-block border border-white/30 px-4 py-1 rounded-full text-white/80 text-xs font-bold uppercase tracking-[0.2em] mb-6 backdrop-blur-sm fade-in">
+                Bienvenido a la Excelencia
+            </div>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-tight fade-in" style="animation-delay: 0.2s">
+                First Class
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-200 mb-10 font-light max-w-2xl mx-auto fade-in" style="animation-delay: 0.4s">
+                Sitio autogenerado (Versión preliminar)
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in" style="animation-delay: 0.6s">
+                <button class="bg-accent text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest hover:bg-white hover:text-slate-900 transition duration-300 shadow-xl">
+                    Descubrir Más
+                </button>
+                <a href="undefined" target="_blank" class="border border-white/30 text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest hover:bg-white/10 transition backdrop-blur-md">
+                    Ver Web Anterior
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro / About -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="absolute -top-4 -left-4 w-24 h-24 bg-accent/20 rounded-full blur-xl"></div>
+                <div class="relative z-10 bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-lg">
+                    <h3 class="font-serif text-3xl font-bold mb-4">Líderes en Benidorm</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        En <strong>First Class</strong>, nos dedicamos a ofrecer soluciones que marcan la diferencia. Nuestro compromiso con la innovación y la satisfacción del cliente nos posiciona como referentes en el sector.
+                    </p>
+                    <div class="flex gap-8 border-t border-slate-200 pt-6">
+                        <div>
+                            <div class="text-3xl font-bold text-accent">100%</div>
+                            <div class="text-xs uppercase tracking-wider text-slate-400">Calidad</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-accent">24/7</div>
+                            <div class="text-xs uppercase tracking-wider text-slate-400">Atención</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span class="text-accent font-bold uppercase tracking-widest text-sm mb-2 block">Nuestra Filosofía</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Innovación y Tradición de la mano.</h2>
+                <p class="text-lg text-slate-500 mb-8 font-light">
+                    Hemos modernizado nuestra presencia digital para estar más cerca de ti. Esta nueva plataforma es un reflejo de nuestra evolución constante.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-slate-100 p-3 rounded-lg"><svg class="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Servicio Premium</h4>
+                            <p class="text-sm text-slate-500">Atención detallada.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="bg-slate-100 p-3 rounded-lg"><svg class="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Gestión Rápida</h4>
+                            <p class="text-sm text-slate-500">Sin esperas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Cards -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-serif font-bold mb-4">Nuestros Servicios</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-10 rounded-xl shadow-sm hover:shadow-2xl transition duration-500 group border border-slate-100">
+                    <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition duration-500">
+                        <svg class="w-8 h-8 text-slate-700 group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-serif">Servicio Especializado 1</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">Soluciones adaptadas a las necesidades específicas de nuestros clientes en Benidorm, garantizando resultados óptimos.</p>
+                    <a href="#" class="text-accent font-bold text-sm uppercase tracking-wider group-hover:underline">Leer Más &rarr;</a>
+                </div>
+                
+                <div class="bg-white p-10 rounded-xl shadow-sm hover:shadow-2xl transition duration-500 group border border-slate-100">
+                    <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition duration-500">
+                        <svg class="w-8 h-8 text-slate-700 group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-serif">Servicio Especializado 2</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">Soluciones adaptadas a las necesidades específicas de nuestros clientes en Benidorm, garantizando resultados óptimos.</p>
+                    <a href="#" class="text-accent font-bold text-sm uppercase tracking-wider group-hover:underline">Leer Más &rarr;</a>
+                </div>
+                
+                <div class="bg-white p-10 rounded-xl shadow-sm hover:shadow-2xl transition duration-500 group border border-slate-100">
+                    <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition duration-500">
+                        <svg class="w-8 h-8 text-slate-700 group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-serif">Servicio Especializado 3</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">Soluciones adaptadas a las necesidades específicas de nuestros clientes en Benidorm, garantizando resultados óptimos.</p>
+                    <a href="#" class="text-accent font-bold text-sm uppercase tracking-wider group-hover:underline">Leer Más &rarr;</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Footer -->
+    <footer class="bg-slate-900 text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-8">¿Listo para empezar?</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto mb-12 text-lg">
+                Contacte con nosotros hoy mismo y descubra por qué somos la opción preferida en Benidorm.
+            </p>
+            <button class="bg-white text-slate-900 px-10 py-4 rounded-full font-bold hover:bg-accent hover:text-white transition duration-300 mb-16 shadow-lg shadow-white/10">
+                Solicitar Cita Previa
+            </button>
+            <div class="border-t border-slate-800 pt-8 text-slate-500 text-sm flex justify-between items-center">
+                <div>&copy; 2025 First Class. Todos los derechos reservados.</div>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white">Privacidad</a>
+                    <a href="#" class="hover:text-white">Términos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Agency Floating Badge -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="../index.html" class="bg-black/80 backdrop-blur text-white px-4 py-3 rounded-lg shadow-2xl flex items-center gap-3 hover:bg-black transition border border-white/10">
+            <div class="text-right">
+                <div class="text-[10px] uppercase text-slate-400 tracking-widest">Diseñado por</div>
+                <div class="font-bold text-sm leading-none">Agencia Costa Digital</div>
+            </div>
+            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center font-bold text-black" style="font-family: serif;">CD</div>
+        </a>
+    </div>
+
+</body>
+</html>

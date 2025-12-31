@@ -1,143 +1,1733 @@
+
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es" class="scroll-smooth">
 <head>
-    <title>Portfolio Agencia Costa Digital</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia Costa Digital | Transformación Web en Benidorm</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        display: ['Space Grotesk', 'sans-serif'] 
+                    },
+                    colors: {
+                        brand: '#2563eb',
+                        dark: '#0f172a'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+<body class="bg-dark text-white antialiased">
 
-<body class="bg-slate-900 text-white p-10">
-    <h1 class="text-4xl font-bold mb-10 text-center text-yellow-400">Agencia Costa Digital - Proyectos V2.0</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="font-display font-bold text-2xl tracking-tighter">AGENCIA <span class="text-brand">COSTA DIGITAL</span></div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+                <a href="#work" class="hover:text-white transition">Proyectos</a>
+                <a href="#method" class="hover:text-white transition">Metodología</a>
+                <a href="#contact" class="hover:text-white transition">Contacto</a>
+            </div>
+            <a href="#contact" class="bg-white text-dark px-6 py-2 rounded-full font-bold text-sm hover:bg-brand hover:text-white transition">
+                Auditoría Gratuita
+            </a>
+        </div>
+    </nav>
 
-        <a href="./gestoria-en-benidorm-de-empresas-gil--zalve-y-asoc/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">Gestoria en Benidorm de empresas
-                Gil, Zalve y Asociados, Gestor de empresas Benidorn. Asesoria fiscal y contable</h2>
-            <p class="text-sm text-gray-400 truncate">http://www.asesoriaenbenidorm.com/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./gasc-n-medina/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">GASCÓN MEDINA</h2>
-            <p class="text-sm text-gray-400 truncate">https://www.gasconmedinaasesores.com/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./torres-asesores/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">TORRES ASESORES</h2>
-            <p class="text-sm text-gray-400 truncate">https://torresasesoria.com/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./gesstar-gestores-sl/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">gesstar gestores sl</h2>
-            <p class="text-sm text-gray-400 truncate">http://www.gesstar.com/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./nirvana-asesores-y-alquiler-de-despachos/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">Nirvana ASESORES Y ALQUILER DE
-                DESPACHOS</h2>
-            <p class="text-sm text-gray-400 truncate">http://www.nirvanasesores.es/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./asesor-a-supervisi-n/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">Asesoría Supervisión</h2>
-            <p class="text-sm text-gray-400 truncate">http://www.supervisiononline.es/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./asesor-a-pilar-tes-as/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">Asesoría Pilar Tesías</h2>
-            <p class="text-sm text-gray-400 truncate">http://pilartesias.com/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./asesor-a-mera/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">Asesoría Mera</h2>
-            <p class="text-sm text-gray-400 truncate">http://www.asesoriamera.com/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./p-rez-aguilar-asesores-tributarios-tax/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">PÉREZ AGUILAR Asesores Tributarios
-                TAX</h2>
-            <p class="text-sm text-gray-400 truncate">http://www.perezaguilar.com/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./costa-benidorm/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">Costa Benidorm</h2>
-            <p class="text-sm text-gray-400 truncate">http://www.costabenidorm.com/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./administraci-n-de-fincas-manuel-voces/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">Administración de Fincas Manuel
-                Voces</h2>
-            <p class="text-sm text-gray-400 truncate">https://manuelvoces.com/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./cumlex-abogados-benidorm/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">CUMLEX Abogados Benidorm</h2>
-            <p class="text-sm text-gray-400 truncate">https://www.cumlexabogados.com/abogados-benidorm/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./pedro-torres-10x/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">Pedro Torres 10x</h2>
-            <p class="text-sm text-gray-400 truncate">http://www.pedrotorres10x.es/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./guardiola---amar-abogados-benidorm--penal--divorci/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">Guardiola & Amar Abogados Benidorm,
-                Penal, Divorcios, Herencias, Desahucios, Extranjería, Inmobiliario</h2>
-            <p class="text-sm text-gray-400 truncate">https://ga-abogados.es/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./jos--calero---abogado/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">JOSÉ CALERO | Abogado</h2>
-            <p class="text-sm text-gray-400 truncate">http://josecalero.es/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./cs-consultores/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">CS Consultores</h2>
-            <p class="text-sm text-gray-400 truncate">https://csconsultoresfinancieros.es/prestamos-en-benidorm</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./ribera-carretero-asociados/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">Ribera Carretero Asociados</h2>
-            <p class="text-sm text-gray-400 truncate">https://www.abogadosbenidorm.es/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./administracion-de-fincas-marina-baixa/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">Administracion de Fincas Marina
-                Baixa</h2>
-            <p class="text-sm text-gray-400 truncate">https://marinabaixa.es/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./admirasa-administraci-n-de-fincas-ram-n-s-nchez-li/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">Admirasa Administración de Fincas
-                Ramón Sánchez Lizarte</h2>
-            <p class="text-sm text-gray-400 truncate">http://www.admirasa.com/es/index.htm</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-        <a href="./balongo/index.html"
-            class="block bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition border border-slate-700 group">
-            <h2 class="text-xl font-bold group-hover:text-yellow-400 mb-2 truncate">Balongo</h2>
-            <p class="text-sm text-gray-400 truncate">http://www.balongo.eu/</p>
-            <div class="mt-4 text-xs font-mono text-green-400">Ver Propuesta &rarr;</div>
-        </a>
-    </div>
+    <!-- Hero -->
+    <header class="pt-32 pb-20 md:pt-48 md:pb-32 px-6 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-brand/20 blur-[120px] rounded-full"></div>
+        <div class="max-w-7xl mx-auto relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-sm mb-8 text-brand font-medium">
+                <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+                Especialistas en Benidorm & Costa Blanca
+            </div>
+            <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight tracking-tight">
+                Impulsando negocios locales <br>
+                hacia la <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-cyan-400">Era Digital.</span>
+            </h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12">
+                No hacemos simples páginas web. Creamos experiencias digitales de alto rendimiento que convierten visitantes en clientes leales.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#work" class="bg-brand text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-600 transition shadow-lg shadow-brand/25">
+                    Ver Casos de Éxito
+                </a>
+                <button class="border border-white/20 px-8 py-4 rounded-lg font-bold hover:bg-white/5 transition">
+                    Nuestros Servicios
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats -->
+    <section class="border-y border-white/5 bg-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="font-display text-4xl font-bold text-white mb-1">100+</div>
+                <div class="text-sm text-slate-400 uppercase tracking-widest">Webs Auditadas</div>
+            </div>
+            <div>
+                <div class="font-display text-4xl font-bold text-white mb-1">98%</div>
+                <div class="text-sm text-slate-400 uppercase tracking-widest">Score Google</div>
+            </div>
+            <div>
+                <div class="font-display text-4xl font-bold text-white mb-1">2025</div>
+                <div class="text-sm text-slate-400 uppercase tracking-widest">Tecnología</div>
+            </div>
+            <div>
+                <div class="font-display text-4xl font-bold text-white mb-1">24h</div>
+                <div class="text-sm text-slate-400 uppercase tracking-widest">Entrega Demo</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section id="work" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Últimas Transformaciones</h2>
+                <p class="text-slate-400 max-w-2xl">Explora algunas de las propuestas de rediseño que hemos preparado para líderes del sector en Benidorm.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                    <a href="./gestoria-en-benidorm-de-empresas-gil--zalve-y-asoc/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">G</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Gestoria en Benidorm de empresas Gil, Zalve y Asociados, Gestor de empresas Benidorn. Asesoria fiscal y contable</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.asesoriaenbenidorm.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./gasc-n-medina/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">G</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">GASCÓN MEDINA</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.gasconmedinaasesores.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./torres-asesores/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">T</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">TORRES ASESORES</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://torresasesoria.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./gesstar-gestores-sl/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">g</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">gesstar gestores sl</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.gesstar.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./nirvana-asesores-y-alquiler-de-despachos/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">N</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Nirvana ASESORES Y ALQUILER DE DESPACHOS</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.nirvanasesores.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./asesor-a-supervisi-n/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Asesoría Supervisión</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.supervisiononline.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./asesor-a-pilar-tes-as/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Asesoría Pilar Tesías</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://pilartesias.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./asesor-a-mera/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Asesoría Mera</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.asesoriamera.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./p-rez-aguilar-asesores-tributarios-tax/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">P</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">PÉREZ AGUILAR Asesores Tributarios TAX</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.perezaguilar.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./costa-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">C</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Costa Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.costabenidorm.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./administraci-n-de-fincas-manuel-voces/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Administración de Fincas Manuel Voces</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://manuelvoces.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./cumlex-abogados-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">C</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">CUMLEX Abogados Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.cumlexabogados.com/abogados-benidorm/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./pedro-torres-10x/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">P</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Pedro Torres 10x</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.pedrotorres10x.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./guardiola---amar-abogados-benidorm--penal--divorci/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">G</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Guardiola & Amar Abogados Benidorm, Penal, Divorcios, Herencias, Desahucios, Extranjería, Inmobiliario</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://ga-abogados.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./jos--calero---abogado/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">J</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">JOSÉ CALERO | Abogado</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://josecalero.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./cs-consultores/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">C</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">CS Consultores</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://csconsultoresfinancieros.es/prestamos-en-benidorm</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./ribera-carretero-asociados/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">R</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Ribera Carretero Asociados</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.abogadosbenidorm.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./administracion-de-fincas-marina-baixa/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Administracion de Fincas Marina Baixa</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://marinabaixa.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./admirasa-administraci-n-de-fincas-ram-n-s-nchez-li/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Admirasa Administración de Fincas Ramón Sánchez Lizarte</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.admirasa.com/es/index.htm</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./balongo/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">B</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Balongo</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.balongo.eu/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./ym-asesores-abogados/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">Y</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">YM ASESORES-ABOGADOS</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://ymasesores-abogados.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./allianz-seguros---agente-david-montiel-ferrer/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://www.allianz.es/content/dam/onemarketing/iberolatam/allianz-es/salesrep/global/allianz-agentes-de-seguros.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Allianz Seguros - Agente David Montiel Ferrer</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.allianz.es/agencia/davidmontiel.html</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./senabre-abogados--/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://senabreabogadosbenidorm.com/wp-content/uploads/2015/12/senabre-abogados-benidorm-bufete-quienes-somos-01.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">SENABRE Abogados ®</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://senabreabogadosbenidorm.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./audidat-cumplimiento-normativo-alicante-la-marina/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_2926,h_568/https://www.audidat.com/wp-content/uploads/2024/02/logo-audidat-2024.png" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Audidat Cumplimiento Normativo Alicante La Marina</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.audidat.com/benidorm/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./sz-abogados-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://szabogados.es/wp-content/uploads/2025/02/image.png" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">SZ Abogados Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://szabogados.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./traductores-va-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://traductor-de-voz.es/themes/vasco-theme/img/home/xmass/hero-xmass.webp" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Traductores VA Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://traductor-de-voz.es/?utm_source=google&utm_medium=business_profile&utm_campaign=seo</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./consultor-a-morales---zaragoza/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://www.moraleszaragoza.com/img/slider/slide1.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Consultoría Morales & Zaragoza</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.moraleszaragoza.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./marvic-properties/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://marvic-properties.com/media/images/banner/banner_1.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Marvic Properties</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.marvic-properties.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./segabogados--benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">S</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Segabogados. Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.segabogados.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./benidorm-film-office/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">B</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Benidorm Film Office</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://benidorm.org/filmoffice/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./registro-de-la-propiedad-de-benidorm-n--01/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">R</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Registro de la Propiedad de Benidorm Nº 01</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.registradores.org/directorio/-/registros/propiedad/alicante/benidorm/registro-de-la-propiedad-de-benidorm-n-01</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./luis-l-pez-abogado---detective-privado/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkdyuYhSpcBTt6VCibnnMw02Tz4jUZnyfEcEZqHEUcuELe395j9C0dpTm1pJCxbXuCo4_ys31GlG2FZAi7JpG42Mdl30tTCjqyMfcR6Ilo-mPdGj5a6flE89AjM-75BWJBDj4NK3udhnOqveeWES716NYKuYXnblOmTa90SOja8RqHCU3BTKhxKEXmd4zNgv9QUUeUnMr8sTEiPWHzBh8aAMdCSL1RtXFH_Oco8=w1280" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Luis López Abogado / Detective privado</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.abogado-detective.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./s-nchez-y-quesada-notarios/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop,q=95/AE0vbMqoeXil6EWL/logo-notaraa-AQEVr4aMkKtkKDz7.png" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Sánchez y Quesada Notarios</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.sanchezyquesadanotarios.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./francisco-fresneda-guill-n/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://franciscofresnedaguillenabogado.es/wp-content/uploads/2025/02/web_LOGOS-KD-3-1024x290.webp" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Francisco Fresneda Guillén</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://franciscofresnedaguillenabogado.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./agencia-de-santaluc-a-seguros/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Agencia de Santalucía Seguros</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.santalucia.es/agencias-de-seguros/alicante/benidorm/avenida-beniarda?utm_campaign=benidorm-avenida-beniarda&utm_medium=cita&utm_source=gmb</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./marina-calero-abogada/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">M</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Marina Calero Abogada</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.linkedin.com/in/marina-c-95aa1015a/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./cumlex-abogados-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">C</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">CUMLEX Abogados Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.cumlexabogados.com/abogados-benidorm/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./marina-calero-abogada/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">M</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Marina Calero Abogada</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.linkedin.com/in/marina-c-95aa1015a/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./garc-a-y-pardo-abogados/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">G</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">García y Pardo Abogados</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.abogadosbenidorm.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./abogalex--soluciones/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Abogalex, Soluciones</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://abogalex.org/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./luis-bajo-fern-ndez-abogados/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">L</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Luis Bajo Fernández Abogados</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.luisbajoabogados.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./abogados-benidorm-bufete-del-campo/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Abogados Benidorm Bufete Del Campo</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.abogadosbenidormdc.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./yolanda-p-rez-guardiola-/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkdoiHoF0GF-yDX8v033d_HMiDWLvoU96wHurVeqmc6G_UuSqzGl4TIpBWiG7Pg08lTnrYc-FdjHJHc_hP7tOONJB_29WxExcxvqwi-MfPq-FTSZ5h5QIWR7Zj6772scjgpKvrTcBDpOvZlbdi1sOi2pVR2JnjvMV4ulBbRTcuEYE4GHbdcIT6Tub2A=w16383" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Yolanda Pérez Guardiola.</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.yolandaperezguardiola-abogados-benidorm.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./nelly-kushkyan-abogados-en-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://nkabogados.es/wp-content/uploads/2025/01/nk-abogados-contacts.webp" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Nelly Kushkyan abogados en Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://nkabogados.es/contacto/?utm_source=gmb&utm_medium=organic&utm_content=listing&utm_campaign=googlemybusinessbenidorm</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./rita-maturana-fosela/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">R</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Rita Maturana Fosela</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://abogadabenidorm.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./abogado-nicol-s-bruno-ovide/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://ovideabogados.es/assets/images/scinicio1.webp" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Abogado Nicolás Bruno Ovide</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://ovideabogados.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./victor-manuel-bodas-torres/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://abogadobenidorm.com/wp-content/uploads/2017/02/logo-abogado-2.png" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Victor Manuel Bodas Torres</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.abogadobenidorm.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./cumlex-abogados-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">C</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">CUMLEX Abogados Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.cumlexabogados.com/abogados-benidorm/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./carlos-rogl--madrid---procurador--roma-despacho-ju/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://files.123inventatuweb.com/acens230158/image/tie-690084_1280.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Carlos Roglá Madrid - Procurador (ROMA Despacho jurídico)</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.procuradoresbenidorm.com.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./sebastian-parrilla-abogado/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkfKN81SHcsF2pkcdT5FtVodFxB-vOUp2aFrWPah3tceuIWFdXDhsRnU0H_7wKiPY3an1kvwDtY4xv7WCJxzjzlwvDAhXLrrFoXLrq1GLSX7Ml4dOfv2K5zBm07VkcmocLzIMgVhVpj1UTNfDLEgpPtdksn2rx3AQI-ntx_ylB6z5BoXpNcxTmQb8QQlHr71OzXvWk8dBe1-SS0A-zkm-7D2H8EI89FdZTis=w1280" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Sebastian Parrilla ABOGADO</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://sebastianparrillaabogado.com/?utm_source=gmb&utm_medium=referral</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./artigas-abogados/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">ARTIGAS ABOGADOS</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.artigasabogados.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./gallego-mira-abogados/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">G</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Gallego Mira Abogados</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.gallegomira.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./benidorm-abogados/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">B</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Benidorm Abogados</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://benidormabogados.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./fashion-city---tienda-de-moda/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">F</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Fashion city - Tienda de Moda</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://monrapiel.online/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./tot-blanc-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">T</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Tot Blanc Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.totblancbenidorm.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./m47-modas/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://www.m47modas.com/img/cms/portada/portada%20oi2526%20(4).png" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">M47 Modas</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.m47modas.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./pilar-prieto/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">P</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Pilar Prieto</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.pilarprieto.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./bh-urban/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">B</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">BH URBAN</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://bhurban.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./pilar-prieto/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">P</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Pilar Prieto</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.pilarprieto.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./pilar-prieto/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">P</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Pilar Prieto</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.pilarprieto.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./koala-bay-benidorm-alejos/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">K</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Koala Bay Benidorm Alejos</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://koalabay.com/es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./mango/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">M</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">MANGO</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://shop.mango.com/es/es/h/mujer?utm_source=google&utm_medium=organic&utm_campaign=googlemaps</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./d-sastre-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">D</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">D-Sastre Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.d-sastre.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./fresh-fashion-guru/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">F</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Fresh Fashion Guru</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.terimehar.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./extravagance/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">E</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Extravagance</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://extravagance.ueniweb.com/?utm_campaign=gmb</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./fashion-benidorm-eiza-limited-edition/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">F</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Fashion Benidorm Eiza Limited Edition</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://fashion-benidorm.company.site/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./zeeman/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">Z</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Zeeman</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.zeeman.com/fr/store/saint-cl--ment-rue-de-la-gaillarde?utm_source=google&utm_medium=organic&utm_campaign=gmb</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./dandara-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://dandara.es/img/logo-1729511282.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">dandara benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.dandara.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./boutique-rodeo-drive/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">B</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">BOUTIQUE RODEO DRIVE</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.boutiquerodeodrive.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./send-n-1997--s-l-/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://sendin1997.com/wp-content/uploads/2024/02/lavespita.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Sendín 1997, S.L.</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://sendin1997.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./angela-farach---moda-y-complementos/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Angela Farach - Moda y Complementos</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.facebook.com/angelafarach</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./cool-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://ecool.es/img/cms/REGALOS%20NAVIDAD%202025/regalos%20banner%20reyes.jpeg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Cool Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://ecool.es/?utm_medium=maps&utm_source=google&utm_campaign=GBPBenidorm</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./first-class/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">F</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">First Class</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://monrapiel.online/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./cool-meeting---benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">C</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Cool Meeting | Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://ecool.es/?utm_medium=maps&utm_source=google&utm_campaign=GBPBenidorm</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./outlet-city/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">O</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Outlet city</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://cityoutlet.biz/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./boutique-luna--eva-ruiz-/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">B</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Boutique Luna (Eva Ruiz)</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.boutiqueluna.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./avenida-uno/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Avenida Uno</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://avenidauno.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./mutatio-shop--iconic-wearing/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">M</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">MUTATIO SHOP, ICONIC WEARING</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://mutatioshop.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./be-bop/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">B</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Be bop</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.ecool.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./chiquitines-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">C</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Chiquitines Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.chiquitines.net/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./base-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://base.net/cdn/shop/files/BANNER_MOBILE_NAVIDAD_BASE_V2.jpg?v=1764692468&width=980" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Base Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.base.net/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./tienda-de-moda-urbana-benidorm-polinesia/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">T</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Tienda de moda urbana Benidorm Polinesia</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.polinesia.es/es-es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./ag25/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">AG25</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.ag-25.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./bata-blanca/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop,q=95/AQExgQXy9bhDvngO/batablanca-logo-A3Q23oa8rlhjo2Rn.png" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Bata Blanca</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.batablancauniformes.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./belcoquet/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAUAAQAAAACO9nKaAAAAAnRSTlMAAHaTzTgAAAFCSURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAXA7U8AAGRQ3nKAAAAAElFTkSuQmCC" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Belcoquet</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.belcoquet.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./btwin-by-avenida-uno/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://avenidauno.com/img/logo-1673343938.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">BTWIN by Avenida Uno</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.avenidauno.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./lacoste/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">L</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Lacoste</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.lacoste.com/sa/en/stores/spain/alicante/lacostebenidorm-1998</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./engel---v-lkers-real-estate-inmobiliaria-en-benido/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://website.engelvoelkers.com/_next/image?url=https%3A%2F%2F3e5eef3f7c0f439f53a1.ucr.io%2F-%2Fcrop%2F1360%3A583%2Fcenter%2F-%2Fformat%2Fauto%2F-%2Fquality%2Fsmart%2F-%2Fresize%2F2720x1166%2Fhttps%3A%2F%2Fstorage.googleapis.com%2Fprofile-engine-public-prod%2Fshop_profile_images%2Fc010d23a-b685-4d27-bdcb-9f6b4800a4c4_oficina%2520foto%2520de%2520Mihai.jpg&w=1920&q=75" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Engel & Völkers Real Estate Inmobiliaria en Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.engelvoelkers.com/benidorm/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./inmobiliaria-k-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://inmoselect.com/wp-content/uploads/2024/05/cropped-Orange-Minimalist-Real-Estate-Logo1.png" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">INMOBILIARIA K BENIDORM</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://inmoselect.com/comunidad-valenciana/benidorm/#desc4</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./inmobiliaria-inmosales-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">I</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Inmobiliaria InmoSales Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.inmosales.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./inmoext/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">I</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">INMOEXT</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.inmoext.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./inmobiliaria-sol-de-poniente/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">I</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Inmobiliaria Sol de Poniente</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.inmobiliariasoldeponiente.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./inmobiliaria-selenhome-s-l/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">I</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Inmobiliaria Selenhome S.L</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://selenhome.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./virtual-home-grupo-inmobiliario/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">V</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Virtual Home Grupo Inmobiliario</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.virtual-home.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./tucasabenidorm-com--publicita-aqu--tu-venta--gesti/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">T</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">TuCasaBenidorm.com: Publicita aquí tu venta, gestionada como propia. Propiedades selectas, dedicación total, VENTA segura.</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://tucasabenidorm.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./agencia-poniente/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">A</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Agencia Poniente</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">http://www.agenciaponiente.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./visual-home/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://uxedata.nbg1.your-objectstorage.com/01.+VENTA+DIGITAL.png" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Visual Home</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.visual-home.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./rental-benidorm-aparts-sl---centro/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">R</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">RENTAL BENIDORM apARTs SL / CENTRO</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://rentalbenidorm.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./inmobiliaria-inmosales-benidorm/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900 text-slate-600 font-display font-bold text-2xl">I</div>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Inmobiliaria InmoSales Benidorm</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.inmosales.com/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="./juan-gomez-inmobiliaria/index.html" target="_blank" class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-white/5 hover:border-brand/50 transition duration-300">
+                        <div class="h-48 bg-slate-900 relative overflow-hidden">
+                            <img src="https://storage.googleapis.com/static.inmoweb.es/clients/4180/header/68DD1E1418B98.jpg" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-300"></div>
+                            <div class="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition">V2.0</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-brand font-bold uppercase tracking-widest mb-2">Propuesta 2025</div>
+                            <h3 class="font-display text-xl font-bold text-white mb-2 group-hover:text-brand transition">Juan Gomez Inmobiliaria</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">https://www.juangomezinmobiliaria.es/</p>
+                            <div class="mt-4 flex items-center gap-2 text-sm font-medium text-white group-hover:gap-4 transition-all">
+                                Ver Demo <span class="text-brand">&rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#" class="inline-block border border-white/20 text-white px-8 py-3 rounded-full hover:bg-white hover:text-dark transition">Cargar Más Proyectos</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer CTA -->
+    <section id="contact" class="py-24 bg-brand relative overflow-hidden">
+         <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-8">¿Es dueño de un negocio en Benidorm?</h2>
+            <p class="text-xl text-blue-100 mb-10">
+                Solicite hoy mismo una auditoría gratuita y reciba una propuesta de diseño preliminar en menos de 24 horas.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-brand px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition shadow-xl">
+                    Solicitar Mi Demo
+                </button>
+                <a href="mailto:hola@agenciacostadigital.com" class="bg-blue-700 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-800 transition">
+                    Contactar por Email
+                </a>
+            </div>
+         </div>
+    </section>
+
+    <footer class="bg-dark py-12 border-t border-white/10 text-center text-slate-500 text-sm">
+        <p>&copy; 2025 Agencia Costa Digital. Transformando Benidorm píxel a píxel.</p>
+    </footer>
+
 </body>
-
 </html>

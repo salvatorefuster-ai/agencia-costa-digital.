@@ -4,269 +4,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black go Transfer | Rediseño Exclusivo 2025</title>
+    <title>Black go Transfer | Propuesta de Identidad Digital V2.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { 
-                        brand: {
-                            light: '#f8fafc',
-                            DEFAULT: '#0f172a',
-                            dark: '#020617',
-                            accent: '#c5a358'
-                        }
-                    },
-                    fontFamily: { 
-                        sans: ['Outfit', 'sans-serif'], 
-                        serif: ['Playfair Display', 'serif'] 
-                    }
+                    colors: { brand: { light: '#fdfdfd', DEFAULT: '#090909', dark: '#000000', gold: '#c5a358' } },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
                 }
             }
         }
     </script>
     <style>
-        @keyframes reveal { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        .reveal { animation: reveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; opacity: 0; }
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.2, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .lux-border { border: 1px solid rgba(197, 163, 88, 0.2); }
         
-        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
-        .hero-gradient { background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.9)); }
-
-        /* Comparison Slider Styles */
-        .comparison-slider {
-            position: relative;
-            width: 100%;
-            height: 600px;
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            background: #000;
-        }
-        .comparison-slider .image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center top;
-            background-repeat: no-repeat;
-        }
-        .comparison-slider .before {
-            background-image: url('./old.png');
-            z-index: 1;
-        }
-        .comparison-slider .after {
-            background-image: url('./new_preview.png');
-            z-index: 2;
-            width: 50%; /* Initial state */
-            border-right: 4px solid #c5a358;
-        }
-        .comparison-slider input[type="range"] {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 30;
-            appearance: none;
-            background: transparent;
-            cursor: ew-resize;
-            margin: 0;
-        }
-        .comparison-slider input::-webkit-slider-thumb {
-            appearance: none;
-            width: 4px;
-            height: 600px;
-            background: transparent;
-        }
-        .slider-handle {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 4px;
-            background: #c5a358;
-            z-index: 20;
-            pointer-events: none;
-            transform: translateX(-50%);
-        }
-        .slider-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 48px;
-            height: 48px;
-            background: #c5a358;
-            border: 4px solid white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            z-index: 25;
-            pointer-events: none;
-        }
+        .comparison-slider { position: relative; width: 100%; height: 75vh; min-height: 500px; overflow: hidden; border-radius: 4px; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.6); }
+        .comparison-slider .image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center top; background-repeat: no-repeat; }
+        .comparison-slider .before { background-image: url('./old.png'); z-index: 1; }
+        .comparison-slider .after { background-image: url('./new_preview.png'); z-index: 2; width: 50%; border-right: 2px solid #c5a358; }
+        .comparison-slider input[type="range"] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 30; appearance: none; background: transparent; cursor: ew-resize; margin: 0; }
+        .comparison-slider input::-webkit-slider-thumb { appearance: none; width: 2px; height: 100vh; background: transparent; }
+        .slider-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: #c5a358; z-index: 20; pointer-events: none; transform: translateX(-50%); }
+        .slider-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(9,9,9,0.9); border: 2px solid #c5a358; border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); z-index: 25; pointer-events: none; }
     </style>
 </head>
-<body class="bg-brand-light font-sans text-brand-DEFAULT antialiased">
+<body class="bg-brand-light font-sans text-brand-DEFAULT antialiased overflow-x-hidden">
 
-    <!-- Header / Nav -->
-    <nav class="fixed w-full z-[100] glass-nav border-b border-black/5">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-brand-dark flex items-center justify-center text-brand-accent font-serif text-2xl font-bold rounded-lg">B</div>
-                <div class="hidden md:block">
-                    <div class="font-serif font-bold text-xl leading-none">Black go Transfer</div>
-                    <div class="text-[10px] uppercase tracking-[0.3em] text-brand-accent mt-1">Estándar de Excelencia</div>
-                </div>
-            </div>
-            <div class="hidden lg:flex gap-10 text-xs font-bold uppercase tracking-widest text-slate-500">
-                <a href="#comparison" class="text-brand-accent font-black hover:text-brand-dark transition">Comparativa</a>
-                <a href="#about" class="hover:text-brand-accent transition">Conócenos</a>
-                <a href="#services" class="hover:text-brand-accent transition">Servicios</a>
-                <a href="#contact" class="hover:text-brand-accent transition">Contacto</a>
-            </div>
-            <button class="bg-brand-dark text-white px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition shadow-lg">
-                Reservar Cita
+    <!-- Header Floating -->
+    <nav class="fixed w-full z-[100] px-6 py-10 pointer-events-none">
+        <div class="max-w-screen-2xl mx-auto flex justify-between items-center pointer-events-auto">
+            <a href="../proyectos.html" class="bg-brand-DEFAULT text-white px-8 py-4 rounded-full text-[9px] font-bold uppercase tracking-[0.3em] flex items-center gap-4 hover:bg-brand-gold transition duration-500 shadow-2xl">
+                <span>&larr; Directorio</span>
+            </a>
+            <div class="font-serif font-bold text-lg italic tracking-widest bg-white/80 backdrop-blur px-8 py-3 rounded-full shadow-lg">Concepto V2.0</div>
+            <button class="bg-brand-gold text-white px-8 py-4 rounded-full text-[9px] font-bold uppercase tracking-[0.3em] hover:bg-brand-DEFAULT transition duration-500 shadow-2xl">
+                Auditoría Completa
             </button>
         </div>
     </nav>
 
-    <!-- Comparison Section (WOW Factor) -->
-    <section id="comparison" class="pt-32 pb-20 bg-brand-dark overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16 px-6">
-                <div class="text-brand-accent font-bold uppercase tracking-[0.4em] text-[10px] mb-4">The Digital Evolution</div>
-                <h2 class="font-serif text-4xl md:text-6xl text-white font-bold mb-6 italic">Antes vs Después</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">Mueva el selector central de izquierda a derecha para ver la diferencia entre su web actual y nuestra propuesta.</p>
+    <!-- Comparison Hero -->
+    <section class="min-h-screen bg-brand-dark flex flex-col justify-center px-6 pt-32 pb-20">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="mb-20 reveal active text-center">
+                <span class="text-brand-gold font-bold uppercase tracking-[0.6em] text-[9px] mb-8 block">Caso de Estudio: Black go Transfer</span>
+                <h1 class="font-serif text-5xl md:text-8xl text-white font-bold leading-tight tracking-tighter">La Transformación <br> <span class="italic font-normal">ha llegado.</span></h1>
             </div>
-
-            <div class="comparison-slider max-w-5xl mx-auto group">
+            
+            <div class="comparison-slider reveal active">
                 <div class="image before">
-                    <div class="absolute top-6 right-6 bg-black/60 backdrop-blur px-4 py-2 rounded text-white text-[10px] uppercase tracking-widest font-bold border border-white/10">Web Antigua</div>
+                    <div class="absolute top-10 right-10 bg-black/80 text-white text-[9px] font-bold uppercase tracking-[0.4em] px-6 py-2 rounded-sm border border-white/10">Estado Actual</div>
                 </div>
                 <div class="image after" id="after-image">
-                    <div class="absolute top-6 left-6 bg-brand-accent px-4 py-2 rounded text-white text-[10px] uppercase tracking-widest font-bold border border-white/20 shadow-lg">Propuesta V2.0</div>
+                    <div class="absolute top-10 left-10 bg-brand-gold text-white text-[9px] font-bold uppercase tracking-[0.4em] px-6 py-2 rounded-sm shadow-xl">Propuesta Elite V2.0</div>
                 </div>
                 <input type="range" min="0" max="100" value="50" id="slider-input">
                 <div class="slider-handle" id="handle"></div>
                 <div class="slider-button" id="slider-btn">
-                    <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M8 7l-5 5m0 0l5 5m-5-5h18m-5-10l5 5m0 0l-5 5"/></svg>
+                    <svg class="w-5 h-5 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M8 7l-5 5m0 0l5 5m-5-5h18m-5-10l5 5m0 0l-5 5"/></svg>
                 </div>
             </div>
-            
-            <div class="mt-12 text-center text-slate-500 text-sm italic">
-                Propuesta de diseño exclusiva generada por Agencia Costa Digital para Black go Transfer.
-            </div>
+            <div class="mt-12 text-center text-slate-500 text-[10px] uppercase tracking-[0.4em]">Arrastre el selector para comparar el potencial.</div>
         </div>
     </section>
 
-    <!-- Hero -->
-    <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="https://blackgotransfer.com/wp-content/uploads/2015/06/furgo-hd.png" class="w-full h-full object-cover">
-            <div class="absolute inset-0 hero-gradient"></div>
-        </div>
-        <div class="relative z-10 text-center px-6 max-w-5xl">
-            <div class="inline-block border border-brand-accent/50 px-6 py-2 rounded-full text-brand-accent text-xs font-bold uppercase tracking-[0.4em] mb-10 backdrop-blur-md reveal">
-                Modern Luxury
-            </div>
-            <h1 class="font-serif text-6xl md:text-9xl text-white font-bold mb-8 reveal delay-1 leading-tight">NEED A RIDE?</h1>
-            <p class="text-xl md:text-2xl text-slate-300 font-light max-w-2xl mx-auto mb-10 reveal delay-2 leading-relaxed">Private transfer from Alicante Airport to Benidorm. Door to door service. Free children chairs & Elevator, free bottled water. Taxi benidorm</p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center reveal delay-3">
-                <button class="bg-brand-accent text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition duration-500 shadow-2xl">Empezar Experiencia</button>
-                <a href="undefined" target="_blank" class="border border-white/40 text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest hover:bg-white/10 transition backdrop-blur-md">Web Anterior</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-24 items-center">
-                <div class="relative">
-                    <img src="https://blackgotransfer.com/wp-content/uploads/2015/06/furgo-hd.png" class="w-full h-full object-cover rounded-2xl shadow-2xl">
-                    <div class="absolute -bottom-10 -right-10 bg-brand-dark text-white p-10 rounded-2xl shadow-2xl hidden md:block max-w-xs">
-                        <div class="text-brand-accent text-3xl font-serif italic mb-4">"Excelencia"</div>
-                        <p class="text-xs text-slate-400 leading-relaxed italic">Nuestra misión es transformar cada interacción en un momento de lujo inolvidable.</p>
+    <!-- Pitch Section -->
+    <section class="py-40 bg-white px-6">
+        <div class="max-w-screen-xl mx-auto grid lg:grid-cols-2 gap-40 items-center">
+            <div class="reveal">
+                <h2 class="font-serif text-6xl font-bold mb-12 leading-tight">Diseñado para ser <br> <span class="italic font-normal">Imprescindible.</span></h2>
+                <div class="space-y-8 text-lg font-light leading-relaxed text-slate-600">
+                    <p>En el mercado de alto nivel de Benidorm, la primera impresión no es solo importante; lo es todo. Su plataforma digital actual podría estar alejando al 80% de sus clientes potenciales que navegan desde dispositivos móviles.</p>
+                    <p>Nuestra propuesta V2.0 para <strong>Black go Transfer</strong> no es solo un cambio estético. Es una reingeniería completa de la experiencia de usuario, optimizada para la velocidad, la usabilidad y, sobre todo, la <strong>exclusividad.</strong></p>
+                </div>
+                <div class="mt-16 grid grid-cols-2 gap-10">
+                    <div class="lux-border p-8">
+                        <div class="text-4xl font-serif text-brand-gold mb-2">+300%</div>
+                        <div class="text-[9px] uppercase tracking-widest text-slate-400">Velocidad de Carga</div>
                     </div>
-                </div>
-                <div>
-                    <h2 class="font-serif text-5xl md:text-6xl font-bold mb-10 leading-tight">Tradición que mira al futuro.</h2>
-                    <p class="text-lg text-slate-600 font-light leading-relaxed mb-8">En <strong>Black go Transfer</strong>, entendemos que el verdadero lujo es el servicio impecable. Hemos evolucionado nuestra presencia digital para reflejar la calidad que ya ofrecemos en persona.</p>
-                    <div class="grid grid-cols-2 gap-12 pt-12 border-t border-slate-100">
-                        <div>
-                            <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Presencia</div>
-                            <div class="text-2xl font-serif font-bold italic text-brand-dark">Benidorm</div>
-                        </div>
-                        <div>
-                            <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Diseño</div>
-                            <div class="text-2xl font-serif font-bold italic text-brand-dark">Elite V2</div>
-                        </div>
+                    <div class="lux-border p-8">
+                        <div class="text-4xl font-serif text-brand-gold mb-2">100%</div>
+                        <div class="text-[9px] uppercase tracking-widest text-slate-400">Mobile Responsive</div>
                     </div>
                 </div>
             </div>
+            <div class="reveal">
+                <div class="aspect-square bg-slate-900 flex items-center justify-center font-serif text-8xl text-brand-gold italic">B</div>
+            </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-32 bg-brand-dark text-white">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-             <h2 class="font-serif text-5xl md:text-7xl font-bold mb-20 leading-tight">Servicios Premium</h2>
-             <div class="grid md:grid-cols-3 gap-10">
-                
-                    <div class="bg-white/5 border border-white/10 p-12 rounded-2xl hover:bg-white hover:text-brand-dark transition duration-700 text-left group">
-                        <h3 class="font-serif text-3xl font-bold mb-6">Solución Especializada 1</h3>
-                        <p class="text-slate-400 group-hover:text-brand-dark/70 text-lg font-light leading-relaxed mb-8">Un enfoque holístico diseñado para satisfacer los objetivos más ambiciosos con precisión impecable.</p>
-                        <div class="w-12 h-[2px] bg-brand-accent group-hover:bg-brand-dark transition duration-500"></div>
-                    </div>
-                
-                    <div class="bg-white/5 border border-white/10 p-12 rounded-2xl hover:bg-white hover:text-brand-dark transition duration-700 text-left group">
-                        <h3 class="font-serif text-3xl font-bold mb-6">Solución Especializada 2</h3>
-                        <p class="text-slate-400 group-hover:text-brand-dark/70 text-lg font-light leading-relaxed mb-8">Un enfoque holístico diseñado para satisfacer los objetivos más ambiciosos con precisión impecable.</p>
-                        <div class="w-12 h-[2px] bg-brand-accent group-hover:bg-brand-dark transition duration-500"></div>
-                    </div>
-                
-                    <div class="bg-white/5 border border-white/10 p-12 rounded-2xl hover:bg-white hover:text-brand-dark transition duration-700 text-left group">
-                        <h3 class="font-serif text-3xl font-bold mb-6">Solución Especializada 3</h3>
-                        <p class="text-slate-400 group-hover:text-brand-dark/70 text-lg font-light leading-relaxed mb-8">Un enfoque holístico diseñado para satisfacer los objetivos más ambiciosos con precisión impecable.</p>
-                        <div class="w-12 h-[2px] bg-brand-accent group-hover:bg-brand-dark transition duration-500"></div>
-                    </div>
-                
-             </div>
+    <!-- Full Image Preview Section -->
+    <section class="py-40 bg-brand-dark overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-6 reveal">
+            <div class="text-center mb-32">
+                <h3 class="font-serif text-5xl md:text-7xl text-white font-bold mb-8">Concepto Visual 2025</h3>
+                <div class="h-[1px] w-40 bg-brand-gold mx-auto"></div>
+            </div>
+            <div class="relative group">
+                <img src="./new_preview.png" class="w-full h-auto opacity-90 group-hover:opacity-100 transition duration-1000 shadow-blue-500/10 shadow-2xl">
+                <div class="absolute inset-0 border border-white/5 pointer-events-none"></div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-brand-dark text-white py-24 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="font-serif font-bold text-4xl mb-4">Black go Transfer</div>
-            <p class="text-slate-500 mb-12">Rediseño oficial creado por Agencia Costa Digital.</p>
-            <div class="text-slate-500 text-[10px] uppercase tracking-[0.5em]">&copy; 2025 TODOS LOS DERECHOS RESERVADOS</div>
+    <!-- Footer Personalized -->
+    <footer class="py-40 bg-brand-light border-t border-slate-100 text-center px-6">
+        <div class="max-w-screen-md mx-auto">
+            <div class="font-serif text-4xl italic font-bold mb-8">Black go Transfer</div>
+            <p class="text-slate-500 font-light mb-16 leading-relaxed italic">"El futuro de su identidad digital comienza aquí. Estamos listos para elevar su marca al nivel que siempre ha imaginado."</p>
+            <button class="bg-brand-DEFAULT text-white px-20 py-6 rounded-sm font-bold text-xs uppercase tracking-[0.4em] hover:bg-brand-gold transition duration-700 shadow-2xl">
+                Solicitar Implementación Real
+            </button>
+            <div class="mt-32 pt-20 border-t border-slate-100 flex flex-col items-center gap-10">
+                <div class="font-serif text-xl tracking-[0.2em] font-bold uppercase">Agencia Costa Blanca <span class="text-brand-gold italic font-normal">Digital</span></div>
+                <div class="text-[9px] uppercase tracking-[0.5em] text-slate-400">Arquitectos Digitales &bull; Benidorm 2025</div>
+            </div>
         </div>
     </footer>
 
-    <!-- CSS/JS for Slider -->
     <script>
         const input = document.getElementById('slider-input');
         const after = document.getElementById('after-image');
         const handle = document.getElementById('handle');
         const btn = document.getElementById('slider-btn');
-
         input.addEventListener('input', (e) => {
             const val = e.target.value;
             after.style.width = val + '%';
             handle.style.left = val + '%';
             btn.style.left = val + '%';
         });
-    </script>
 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>

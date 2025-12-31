@@ -4,151 +4,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agencia Costa Blanca Digital | Redes Sociales y Diseño Web de Alto Impacto</title>
+    <title>Agencia Costa Blanca Digital | Arquitectos de Identidad Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { 
-                        sans: ['Plus Jakarta Sans', 'sans-serif'], 
-                        display: ['Space Grotesk', 'sans-serif'] 
+                        sans: ['Outfit', 'sans-serif'], 
+                        serif: ['Playfair Display', 'serif'] 
                     },
                     colors: {
-                        primary: '#0f172a',
-                        accent: '#c5a358',
-                        gold: {
-                            light: '#e2cf9f',
-                            DEFAULT: '#c5a358',
-                            dark: '#a68542'
-                        }
+                        dark: '#050505',
+                        gold: '#c5a358',
+                        slate: '#111111'
                     }
                 }
             }
         }
     </script>
     <style>
-        body { background-color: #020617; color: #f8fafc; }
-        .hero-grain { background-image: url('https://grainy-gradients.vercel.app/noise.svg'); opacity: 0.05; pointer-events: none; }
-        .glass { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); }
-        .text-gradient { background: linear-gradient(to right, #ffffff, #c5a358); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .nav-link { position: relative; }
-        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: #c5a358; transition: width 0.3s ease; }
-        .nav-link:hover::after { width: 100%; }
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
-        .float { animation: float 6s ease-in-out infinite; }
+        body { background-color: #050505; color: #ffffff; }
+        .lux-gradient { background: radial-gradient(circle at 50% 50%, rgba(197, 163, 88, 0.08) 0%, transparent 70%); }
+        .parallax-bg { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.2, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .text-balanced { text-wrap: balance; }
+        .gold-underline { position: relative; display: inline-block; }
+        .gold-underline::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: #c5a358; transition: width 0.6s ease; }
+        .gold-underline:hover::after { width: 100%; }
+        
+        @keyframes subtleZoom { from { transform: scale(1); } to { transform: scale(1.05); } }
+        .animate-zoom { animation: subtleZoom 20s ease-in-out infinite alternate; }
     </style>
 </head>
-<body class="selection:bg-gold selection:text-primary">
-
-    <div class="fixed inset-0 hero-grain z-0"></div>
+<body class="antialiased selection:bg-gold selection:text-dark">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-8">
-        <div class="max-w-7xl mx-auto flex justify-between items-center glass px-8 py-4 rounded-full">
-            <div class="font-display font-bold text-xl tracking-tighter uppercase whitespace-nowrap">
-                COSTA <span class="text-gold">BLANCA</span> DIGITAL
+    <nav class="fixed w-full z-50 mix-blend-difference px-6 py-8 md:px-12">
+        <div class="max-w-screen-2xl mx-auto flex justify-between items-center">
+            <div class="font-serif font-bold text-2xl tracking-[0.2em] uppercase">
+                Costa Blanca <span class="italic text-gold opacity-80 font-normal">Digital</span>
             </div>
-            <div class="hidden lg:flex gap-10 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
-                <a href="#servicios" class="nav-link text-white">Servicios</a>
-                <a href="#proyectos" class="nav-link">Directorio</a>
-                <a href="#contacto" class="nav-link">Agencia</a>
+            <div class="hidden md:flex gap-16 text-[10px] font-medium uppercase tracking-[0.4em]">
+                <a href="#vision" class="gold-underline">La Visión</a>
+                <a href="#expertise" class="gold-underline">Expertise</a>
+                <a href="proyectos.html" class="gold-underline text-gold">Portfolio</a>
+                <a href="#contacto" class="gold-underline">Contacto</a>
             </div>
-            <a href="mailto:hola@costablancadigital.com" class="hidden sm:block bg-white text-primary px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-gold transition duration-300">
-                Hablemos
-            </a>
+            <div class="w-8 h-[1px] bg-white md:hidden"></div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <header class="relative min-h-screen flex items-center justify-center pt-32 px-6 overflow-hidden">
-        <div class="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-gold/10 blur-[120px] rounded-full"></div>
-        <div class="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-blue-500/10 blur-[120px] rounded-full"></div>
-        
-        <div class="relative z-10 max-w-5xl text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold uppercase tracking-[0.3em] text-gold mb-10">
-                <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-                Especialistas en Benidorm & Costa Blanca
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" class="w-full h-full object-cover opacity-20 animate-zoom">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark"></div>
+            <div class="lux-gradient absolute inset-0"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-6xl">
+            <div class="reveal active inline-block border border-gold/30 px-6 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.5em] text-gold mb-12">
+                Digital Excellence & Design Boutique
             </div>
-            <h1 class="font-display text-6xl md:text-8xl lg:text-9xl font-bold mb-10 leading-[0.9] tracking-tighter">
-                Diseñamos la <br>
-                <span class="text-gradient">Excelencia.</span>
+            <h1 class="reveal active font-serif text-6xl md:text-9xl font-bold mb-12 leading-[0.8] tracking-tight">
+                Arquitectura <br>
+                <span class="italic font-normal">Digital de Lujo.</span>
             </h1>
-            <p class="text-slate-400 text-lg md:text-2xl max-w-2xl mx-auto mb-16 leading-relaxed font-light">
-                Agencia boutique especializada en gestión estratégica de **redes sociales** y **diseño web** de alto impacto para negocios que exigen lo mejor.
+            <p class="reveal active text-slate-400 text-lg md:text-2xl max-w-2xl mx-auto mb-16 font-light leading-relaxed">
+                Transformando la presencia online de las marcas más exclusivas de Benidorm a través de un diseño impecable y estrategias de redes sociales de alto impacto.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="proyectos.html" class="bg-gold text-white px-10 py-5 rounded-xl font-bold text-sm uppercase tracking-widest hover:scale-105 transition shadow-2xl shadow-gold/20">
-                    Explorar Directorio
+            <div class="reveal active flex flex-col md:flex-row justify-center gap-10">
+                <a href="proyectos.html" class="bg-gold text-white px-12 py-5 rounded-sm font-bold text-[11px] uppercase tracking-[0.3em] hover:bg-white hover:text-dark transition duration-700 shadow-2xl">
+                    Explorar Portfolio
                 </a>
-                <button class="glass px-10 py-5 rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-white/5 transition">
+                <button class="border border-white/20 px-12 py-5 rounded-sm font-bold text-[11px] uppercase tracking-[0.3em] hover:bg-white/5 transition duration-700">
                     Nuestros Servicios
                 </button>
             </div>
         </div>
 
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-slate-500">
-            <div class="w-[1px] h-16 bg-gradient-to-b from-gold to-transparent"></div>
-            <span class="text-[8px] uppercase tracking-[0.5em]">Scroll</span>
+        <div class="absolute bottom-12 left-12 flex items-center gap-6 text-[10px] uppercase tracking-[0.5em] text-slate-500">
+            <div class="w-12 h-[1px] bg-gold"></div>
+            <span>Scroll para Inspirarse</span>
         </div>
     </header>
 
-    <!-- Services -->
-    <section id="servicios" class="py-32 px-6 bg-slate/50 relative z-10">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-            <div>
-                <h2 class="font-display text-5xl font-bold mb-8 italic">Servicios <span class="text-gold">Boutique.</span></h2>
-                <p class="text-slate-400 text-lg mb-12 leading-relaxed">No somos una agencia masiva. Somos compañeros estratégicos que cuidan cada píxel de su imagen digital.</p>
-                <div class="space-y-6">
-                    <div class="glass p-8 rounded-2xl flex gap-6 hover:border-gold/30 transition duration-500 group">
-                        <div class="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-primary transition duration-500">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">Social Media Management</h3>
-                            <p class="text-slate-500 text-sm">Estrategia, contenido y gestión de comunidad centrada en el crecimiento real.</p>
-                        </div>
-                    </div>
-                    <div class="glass p-8 rounded-2xl flex gap-6 hover:border-gold/30 transition duration-500 group">
-                        <div class="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-primary transition duration-500">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">Diseño Web de Élite</h3>
-                            <p class="text-slate-500 text-sm">Sitios web optimizados para móviles, rápidos y con una estética inigualable.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- The Vision -->
+    <section id="vision" class="py-40 bg-dark relative px-6 md:px-12">
+        <div class="max-w-screen-2xl mx-auto grid lg:grid-cols-2 gap-32 items-center">
+            <div class="reveal">
+                <span class="text-gold font-bold uppercase tracking-[0.5em] text-[10px] mb-8 block">Nuestra Filosofía</span>
+                <h2 class="font-serif text-5xl md:text-7xl font-bold mb-12 leading-tight">No diseñamos webs. Creamos <span class="italic font-normal">Legados Digitales.</span></h2>
+                <div class="h-1 w-20 bg-gold mb-12"></div>
+                <p class="text-slate-400 text-xl font-light leading-relaxed mb-12">
+                    En Agencia Costa Blanca Digital entendemos que su sitio web no es una simple herramienta de información; es la extensión más pura de su marca en el mundo digital. 
+                </p>
+                <p class="text-slate-500 text-lg font-light leading-relaxed">
+                    Combinamos la precisión técnica con una estética editorial de revista para asegurar que su negocio no solo sea visto, sino que sea deseado.
+                </p>
             </div>
-            <div class="relative">
-                <div class="aspect-square bg-gradient-to-br from-gold/20 to-transparent rounded-[40px] flex items-center justify-center p-10">
-                    <div class="w-full h-full glass rounded-[30px] shadow-2xl overflow-hidden relative group">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-1000">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="font-display font-black text-6xl text-gold/30">C B D</div>
-                        </div>
-                    </div>
+            <div class="reveal relative aspect-[3/4] overflow-hidden rounded-sm group">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-[2s]">
+                <div class="absolute inset-0 bg-dark/20 border border-white/5"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="expertise" class="py-40 bg-slate px-6 md:px-12">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="text-center mb-32 reveal">
+                <h2 class="font-serif text-4xl md:text-6xl font-bold italic mb-6">Expertise Premium</h2>
+                <div class="text-[10px] uppercase tracking-[0.5em] text-gold">Soluciones de Alto Rendimiento</div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-1px bg-white/5 border border-white/5 reveal">
+                <div class="bg-dark p-16 hover:bg-slate transition duration-700">
+                    <div class="text-gold text-4xl font-serif mb-12">01</div>
+                    <h3 class="text-2xl font-bold mb-8 uppercase tracking-widest font-serif">Redes Sociales</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">Gestión estratégica de Instagram y LinkedIn centrada en el posicionamiento de marca premium y la generación de autoridad.</p>
+                </div>
+                <div class="bg-dark p-16 hover:bg-slate transition duration-700">
+                    <div class="text-gold text-4xl font-serif mb-12">02</div>
+                    <h3 class="text-2xl font-bold mb-8 uppercase tracking-widest font-serif">Web Editorial</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">Diseño minimalista, rápido y optimizado para la conversión. Creamos experiencias que respiran exclusividad.</p>
+                </div>
+                <div class="bg-dark p-16 hover:bg-slate transition duration-700">
+                    <div class="text-gold text-4xl font-serif mb-12">03</div>
+                    <h3 class="text-2xl font-bold mb-8 uppercase tracking-widest font-serif">Identidad Visual</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">Refinamos la esencia de su marca para que hable el lenguaje del lujo contemporáneo en cada soporte.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contacto" class="py-24 border-t border-white/5 bg-black/50">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="font-display font-bold text-3xl mb-12 tracking-tighter">AGENCIA <span class="text-gold">COSTA BLANCA</span> DIGITAL</div>
-            <div class="flex flex-wrap justify-center gap-12 text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500 mb-20">
-                <a href="#" class="hover:text-white">Instagram</a>
-                <a href="#" class="hover:text-white">LinkedIn</a>
-                <a href="mailto:hola@costablancadigital.com" class="hover:text-white">hola@costablancadigital.com</a>
+    <!-- Footer VIP -->
+    <footer id="contacto" class="py-40 border-t border-white/5 px-6 md:px-12">
+        <div class="max-w-screen-2xl mx-auto text-center">
+            <h2 class="font-serif text-5xl md:text-8xl font-bold mb-16 tracking-tighter">¿Hablamos de su <br> <span class="italic text-gold opacity-80">Evolución?</span></h2>
+            <div class="flex flex-wrap justify-center gap-20 mb-32">
+                 <div class="text-left">
+                    <div class="text-[10px] uppercase tracking-[0.5em] text-slate-500 mb-6 font-bold">Oficina</div>
+                    <div class="text-lg font-light italic">Benidorm, Marina Baixa</div>
+                 </div>
+                 <div class="text-left">
+                    <div class="text-[10px] uppercase tracking-[0.5em] text-slate-500 mb-6 font-bold">Email</div>
+                    <div class="text-lg font-light italic">hola@costablancadigital.com</div>
+                 </div>
+                 <div class="text-left">
+                    <div class="text-[10px] uppercase tracking-[0.5em] text-slate-500 mb-6 font-bold">Social</div>
+                    <div class="text-lg font-light italic">@costablancadigital</div>
+                 </div>
             </div>
-            <p class="text-slate-700 text-[8px] uppercase tracking-widest leading-loose">
-                &copy; 2025 AGENCIA COSTA BLANCA DIGITAL. TRANSFORMANDO EL PAISAJE DIGITAL DE BENIDORM. <br>
-                PROYECTOS EXCLUSIVOS BAJO DEMANDA.
-            </p>
+            <div class="pt-20 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-10">
+                <div class="text-[10px] uppercase tracking-[0.3em] font-medium">&copy; 2025 AGENCIA COSTA BLANCA DIGITAL</div>
+                <div class="text-[10px] uppercase tracking-[0.3em] font-medium italic opacity-50">Calidad Benidorm &copy; Prohibida su reproducción parcial o total.</div>
+            </div>
         </div>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 
 </body>
 </html>

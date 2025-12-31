@@ -33,10 +33,86 @@
         .delay-1 { animation-delay: 0.2s; }
         .delay-2 { animation-delay: 0.4s; }
         .delay-3 { animation-delay: 0.6s; }
+        
         .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
         .hero-gradient { background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.9)); }
-        .luxury-card { transition: all 0.4s ease; border: 1px solid rgba(0,0,0,0.05); }
-        .luxury-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3); border-color: #c5a358; }
+
+        /* Comparison Slider Styles */
+        .comparison-slider {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            background: #000;
+        }
+        .comparison-slider .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+        .comparison-slider .before {
+            background-image: url('./old.png');
+            z-index: 1;
+        }
+        .comparison-slider .after {
+            background-image: url('./new_preview.png');
+            z-index: 2;
+            width: 50%; /* Initial state */
+            border-right: 4px solid #c5a358;
+        }
+        .comparison-slider input[type="range"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 30;
+            appearance: none;
+            background: transparent;
+            cursor: ew-resize;
+            margin: 0;
+        }
+        .comparison-slider input::-webkit-slider-thumb {
+            appearance: none;
+            width: 4px;
+            height: 600px;
+            background: transparent;
+        }
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #c5a358;
+            z-index: 20;
+            pointer-events: none;
+            transform: translateX(-50%);
+        }
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 48px;
+            height: 48px;
+            background: #c5a358;
+            border: 4px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            z-index: 25;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="bg-brand-light font-sans text-brand-DEFAULT antialiased">
@@ -52,9 +128,9 @@
                 </div>
             </div>
             <div class="hidden lg:flex gap-10 text-xs font-bold uppercase tracking-widest text-slate-500">
+                <a href="#comparison" class="text-brand-accent font-black hover:text-brand-dark transition">Comparativa</a>
                 <a href="#about" class="hover:text-brand-accent transition">Conócenos</a>
                 <a href="#services" class="hover:text-brand-accent transition">Servicios</a>
-                <a href="#experience" class="hover:text-brand-accent transition">Experiencia</a>
                 <a href="#contact" class="hover:text-brand-accent transition">Contacto</a>
             </div>
             <button class="bg-brand-dark text-white px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-brand-accent transition shadow-lg">
@@ -63,36 +139,51 @@
         </div>
     </nav>
 
+    <!-- Comparison Section (WOW Factor) -->
+    <section id="comparison" class="pt-32 pb-20 bg-brand-dark overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 px-6">
+                <div class="text-brand-accent font-bold uppercase tracking-[0.4em] text-[10px] mb-4">The Digital Evolution</div>
+                <h2 class="font-serif text-4xl md:text-6xl text-white font-bold mb-6 italic">Antes vs Después</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Mueva el selector central de izquierda a derecha para ver la diferencia entre su web actual y nuestra propuesta.</p>
+            </div>
+
+            <div class="comparison-slider max-w-5xl mx-auto group">
+                <div class="image before">
+                    <div class="absolute top-6 right-6 bg-black/60 backdrop-blur px-4 py-2 rounded text-white text-[10px] uppercase tracking-widest font-bold border border-white/10">Web Antigua</div>
+                </div>
+                <div class="image after" id="after-image">
+                    <div class="absolute top-6 left-6 bg-brand-accent px-4 py-2 rounded text-white text-[10px] uppercase tracking-widest font-bold border border-white/20 shadow-lg">Propuesta V2.0</div>
+                </div>
+                <input type="range" min="0" max="100" value="50" id="slider-input">
+                <div class="slider-handle" id="handle"></div>
+                <div class="slider-button" id="slider-btn">
+                    <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M8 7l-5 5m0 0l5 5m-5-5h18m-5-10l5 5m0 0l-5 5"/></svg>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center text-slate-500 text-sm italic">
+                Propuesta de diseño exclusiva generada por Agencia Costa Digital para Round Town Travel.
+            </div>
+        </div>
+    </section>
+
     <!-- Hero -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://www.roundtowntravel.com/articulos/imagenpral-181.jpg" class="w-full h-full object-cover animate-pulse" style="animation-duration: 15s">
+            <img src="https://www.roundtowntravel.com/articulos/imagenpral-104.jpg" class="w-full h-full object-cover">
             <div class="absolute inset-0 hero-gradient"></div>
         </div>
         <div class="relative z-10 text-center px-6 max-w-5xl">
             <div class="inline-block border border-brand-accent/50 px-6 py-2 rounded-full text-brand-accent text-xs font-bold uppercase tracking-[0.4em] mb-10 backdrop-blur-md reveal">
-                Luxury Lifestyle
+                Modern Luxury
             </div>
-            <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl text-white font-bold mb-8 leading-tight reveal delay-1">
-                Round Town Travel
-            </h1>
-            <p class="text-xl md:text-2xl text-slate-300 font-light max-w-2xl mx-auto mb-12 leading-relaxed reveal delay-2">
-                Round Town Travel,  Tourist information / multi-lingual Travel Agency offering the best deals on the Costa Blanca. cheap holidays in Benidorm. Excursions, Day Breaks, Free Trips, Local events, Holiday Lettings, Hotels and more
-            </p>
+            <h1 class="font-serif text-6xl md:text-9xl text-white font-bold mb-8 reveal delay-1 leading-tight">Round Town Travel</h1>
+            <p class="text-xl md:text-2xl text-slate-300 font-light max-w-2xl mx-auto mb-10 reveal delay-2 leading-relaxed">Round Town Travel,  Tourist information / multi-lingual Travel Agency offering the best deals on the Costa Blanca. cheap holidays in Benidorm. Excursions, Day Breaks, Free Trips, Local events, Holiday Lettings, Hotels and more</p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center reveal delay-3">
-                <a href="#about" class="bg-brand-accent text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition duration-500 shadow-2xl">
-                    Saber Más
-                </a>
-                <a href="undefined" target="_blank" class="border border-white/40 text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest hover:bg-white/10 transition backdrop-blur-md">
-                    Web Actual
-                </a>
+                <button class="bg-brand-accent text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition duration-500 shadow-2xl">Empezar Experiencia</button>
+                <a href="undefined" target="_blank" class="border border-white/40 text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest hover:bg-white/10 transition backdrop-blur-md">Web Anterior</a>
             </div>
-        </div>
-        
-        <!-- Scroll mouse -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-white/40">
-            <div class="w-[2px] h-12 bg-gradient-to-b from-brand-accent to-transparent"></div>
-            <span class="text-[10px] uppercase tracking-widest">Scroll</span>
         </div>
     </section>
 
@@ -101,29 +192,23 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-24 items-center">
                 <div class="relative">
-                    <div class="aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl">
-                        <img src="https://www.roundtowntravel.com/articulos/imagenpral-181.jpg" class="w-full h-full object-cover">
-                    </div>
-                    <div class="absolute -bottom-12 -right-12 bg-brand-dark text-white p-12 rounded-2xl shadow-2xl hidden md:block max-w-xs">
-                        <div class="text-brand-accent text-4xl font-serif italic mb-4">"Calidad"</div>
-                        <p class="text-sm text-slate-400 leading-relaxed italic">"Nuestra misión es superar expectativas, transformando cada interacción en un momento de lujo inolvidable."</p>
+                    <img src="https://www.roundtowntravel.com/articulos/imagenpral-104.jpg" class="w-full h-full object-cover rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-10 -right-10 bg-brand-dark text-white p-10 rounded-2xl shadow-2xl hidden md:block max-w-xs">
+                        <div class="text-brand-accent text-3xl font-serif italic mb-4">"Excelencia"</div>
+                        <p class="text-xs text-slate-400 leading-relaxed italic">Nuestra misión es transformar cada interacción en un momento de lujo inolvidable.</p>
                     </div>
                 </div>
                 <div>
-                    <div class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs mb-6">Sobre la Marca</div>
-                    <h2 class="font-serif text-5xl md:text-6xl font-bold mb-10 leading-tight">Tradición que mira hacia el futuro.</h2>
-                    <div class="space-y-8 text-lg text-slate-600 font-light leading-relaxed">
-                        <p>En <strong>Round Town Travel</strong>, entendemos que el verdadero lujo no es solo lo que se ve, sino lo que se siente. Llevamos años perfeccionando el arte de servir a los clientes más exigentes de Benidorm.</p>
-                        <p>Hemos evolucionado. Esta nueva identidad digital es el reflejo de nuestro compromiso con la innovación tecnológica, sin perder nunca la esencia humana que nos define.</p>
-                    </div>
-                    <div class="grid grid-cols-2 gap-12 mt-16 pt-16 border-t border-slate-100">
+                    <h2 class="font-serif text-5xl md:text-6xl font-bold mb-10 leading-tight">Tradición que mira al futuro.</h2>
+                    <p class="text-lg text-slate-600 font-light leading-relaxed mb-8">En <strong>Round Town Travel</strong>, entendemos que el verdadero lujo es el servicio impecable. Hemos evolucionado nuestra presencia digital para reflejar la calidad que ya ofrecemos en persona.</p>
+                    <div class="grid grid-cols-2 gap-12 pt-12 border-t border-slate-100">
                         <div>
                             <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Presencia</div>
-                            <div class="text-3xl font-serif font-bold italic">Benidorm & World</div>
+                            <div class="text-2xl font-serif font-bold italic text-brand-dark">Benidorm</div>
                         </div>
                         <div>
-                            <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Servicio</div>
-                            <div class="text-3xl font-serif font-bold italic">Top Tier 2025</div>
+                            <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Diseño</div>
+                            <div class="text-2xl font-serif font-bold italic text-brand-dark">Elite V2</div>
                         </div>
                     </div>
                 </div>
@@ -132,169 +217,56 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-32 bg-brand-dark text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-accent/5 blur-[150px] rounded-full"></div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-            <div class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs mb-6">Excelencia en Detalle</div>
-            <h2 class="font-serif text-5xl md:text-7xl font-bold mb-20 leading-tight">Servicios Exclusivos</h2>
-            
-            <div class="grid md:grid-cols-3 gap-10">
+    <section id="services" class="py-32 bg-brand-dark text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+             <h2 class="font-serif text-5xl md:text-7xl font-bold mb-20 leading-tight">Servicios Premium</h2>
+             <div class="grid md:grid-cols-3 gap-10">
                 
-                <div class="bg-white/5 border border-white/10 p-12 rounded-2xl backdrop-blur-sm group hover:bg-white hover:text-brand-dark transition duration-700 text-left">
-                    <div class="mb-8 p-4 bg-brand-accent/20 rounded-xl inline-block group-hover:bg-brand-dark group-hover:text-white transition duration-500">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <div class="bg-white/5 border border-white/10 p-12 rounded-2xl hover:bg-white hover:text-brand-dark transition duration-700 text-left group">
+                        <h3 class="font-serif text-3xl font-bold mb-6">Solución Especializada 1</h3>
+                        <p class="text-slate-400 group-hover:text-brand-dark/70 text-lg font-light leading-relaxed mb-8">Un enfoque holístico diseñado para satisfacer los objetivos más ambiciosos con precisión impecable.</p>
+                        <div class="w-12 h-[2px] bg-brand-accent group-hover:bg-brand-dark transition duration-500"></div>
                     </div>
-                    <h3 class="font-serif text-3xl font-bold mb-6">Propuesta Premium 1</h3>
-                    <p class="text-slate-400 group-hover:text-brand-dark/70 text-lg font-light leading-relaxed mb-8">Un enfoque holístico diseñado para satisfacer los objetivos más ambiciosos con precisión impecable.</p>
-                    <div class="w-12 h-[2px] bg-brand-accent group-hover:bg-brand-dark transition duration-500"></div>
-                </div>
                 
-                <div class="bg-white/5 border border-white/10 p-12 rounded-2xl backdrop-blur-sm group hover:bg-white hover:text-brand-dark transition duration-700 text-left">
-                    <div class="mb-8 p-4 bg-brand-accent/20 rounded-xl inline-block group-hover:bg-brand-dark group-hover:text-white transition duration-500">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <div class="bg-white/5 border border-white/10 p-12 rounded-2xl hover:bg-white hover:text-brand-dark transition duration-700 text-left group">
+                        <h3 class="font-serif text-3xl font-bold mb-6">Solución Especializada 2</h3>
+                        <p class="text-slate-400 group-hover:text-brand-dark/70 text-lg font-light leading-relaxed mb-8">Un enfoque holístico diseñado para satisfacer los objetivos más ambiciosos con precisión impecable.</p>
+                        <div class="w-12 h-[2px] bg-brand-accent group-hover:bg-brand-dark transition duration-500"></div>
                     </div>
-                    <h3 class="font-serif text-3xl font-bold mb-6">Propuesta Premium 2</h3>
-                    <p class="text-slate-400 group-hover:text-brand-dark/70 text-lg font-light leading-relaxed mb-8">Un enfoque holístico diseñado para satisfacer los objetivos más ambiciosos con precisión impecable.</p>
-                    <div class="w-12 h-[2px] bg-brand-accent group-hover:bg-brand-dark transition duration-500"></div>
-                </div>
                 
-                <div class="bg-white/5 border border-white/10 p-12 rounded-2xl backdrop-blur-sm group hover:bg-white hover:text-brand-dark transition duration-700 text-left">
-                    <div class="mb-8 p-4 bg-brand-accent/20 rounded-xl inline-block group-hover:bg-brand-dark group-hover:text-white transition duration-500">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <div class="bg-white/5 border border-white/10 p-12 rounded-2xl hover:bg-white hover:text-brand-dark transition duration-700 text-left group">
+                        <h3 class="font-serif text-3xl font-bold mb-6">Solución Especializada 3</h3>
+                        <p class="text-slate-400 group-hover:text-brand-dark/70 text-lg font-light leading-relaxed mb-8">Un enfoque holístico diseñado para satisfacer los objetivos más ambiciosos con precisión impecable.</p>
+                        <div class="w-12 h-[2px] bg-brand-accent group-hover:bg-brand-dark transition duration-500"></div>
                     </div>
-                    <h3 class="font-serif text-3xl font-bold mb-6">Propuesta Premium 3</h3>
-                    <p class="text-slate-400 group-hover:text-brand-dark/70 text-lg font-light leading-relaxed mb-8">Un enfoque holístico diseñado para satisfacer los objetivos más ambiciosos con precisión impecable.</p>
-                    <div class="w-12 h-[2px] bg-brand-accent group-hover:bg-brand-dark transition duration-500"></div>
-                </div>
                 
-            </div>
-        </div>
-    </section>
-
-    <!-- Visual Experience -->
-    <section id="experience" class="py-32 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-end mb-20 gap-10">
-            <div class="max-w-xl">
-                <div class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs mb-6">Galería Visual</div>
-                <h2 class="font-serif text-5xl md:text-6xl font-bold leading-tight">Momentos de Inspiración</h2>
-            </div>
-            <button class="border border-brand-dark px-10 py-4 font-bold uppercase tracking-widest text-xs hover:bg-brand-dark hover:text-white transition duration-500">
-                Ver Todo el Portfolio
-            </button>
-        </div>
-        
-        <div class="flex gap-8 px-6 animate-[scroll_40s_linear_infinite] hover:pause">
-             
-                <div class="min-w-[400px] h-[500px] rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition duration-1000">
-                    <img src="https://source.unsplash.com/random/800x1000?luxury,city&sig=1" class="w-full h-full object-cover">
-                </div>
-             
-                <div class="min-w-[400px] h-[500px] rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition duration-1000">
-                    <img src="https://source.unsplash.com/random/800x1000?luxury,city&sig=2" class="w-full h-full object-cover">
-                </div>
-             
-                <div class="min-w-[400px] h-[500px] rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition duration-1000">
-                    <img src="https://source.unsplash.com/random/800x1000?luxury,city&sig=3" class="w-full h-full object-cover">
-                </div>
-             
-                <div class="min-w-[400px] h-[500px] rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition duration-1000">
-                    <img src="https://source.unsplash.com/random/800x1000?luxury,city&sig=4" class="w-full h-full object-cover">
-                </div>
-             
-                <div class="min-w-[400px] h-[500px] rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition duration-1000">
-                    <img src="https://source.unsplash.com/random/800x1000?luxury,city&sig=5" class="w-full h-full object-cover">
-                </div>
-             
-                <div class="min-w-[400px] h-[500px] rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition duration-1000">
-                    <img src="https://source.unsplash.com/random/800x1000?luxury,city&sig=6" class="w-full h-full object-cover">
-                </div>
-             
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="py-32 bg-brand-light">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="text-brand-accent text-6xl font-serif mb-12">"</div>
-            <p class="text-3xl md:text-4xl font-serif italic text-slate-700 leading-relaxed mb-12">
-                "La transformación digital de Round Town Travel no solo ha modernizado su imagen, ha redefinido el significado de calidad en todo Benidorm. Una propuesta simplemente excepcional."
-            </p>
-            <div class="flex items-center justify-center gap-6">
-                <div class="w-16 h-16 rounded-full bg-slate-300 overflow-hidden">
-                    <img src="https://i.pravatar.cc/150?u=client" class="w-full h-full object-cover">
-                </div>
-                <div class="text-left">
-                    <div class="font-bold uppercase tracking-widest text-sm">Crítico de Diseño</div>
-                    <div class="text-brand-accent text-xs">Agencia Costa Digital</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section id="contact" class="py-32 relative flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-brand-dark z-0">
-            <img src="https://www.roundtowntravel.com/articulos/imagenpral-181.jpg" class="w-full h-full object-cover opacity-30 scale-110">
-            <div class="absolute inset-0 bg-brand-dark/80"></div>
-        </div>
-        <div class="relative z-10 text-center text-white px-6">
-            <h2 class="font-serif text-5xl md:text-8xl font-bold mb-10">Evolucione Hoy</h2>
-            <p class="text-xl text-slate-300 max-w-xl mx-auto mb-12">No pierda la oportunidad de liderar su sector con la tecnología del mañana.</p>
-            <button class="bg-brand-accent text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest hover:bg-white hover:text-brand-dark transition duration-500 shadow-2xl">
-                Solicitar Auditoría VIP
-            </button>
+             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand-dark text-white pt-24 pb-12 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-16 mb-20 text-center md:text-left">
-                <div class="col-span-1 md:col-span-1">
-                     <div class="font-serif font-bold text-3xl mb-8">Round Town Travel</div>
-                     <p class="text-slate-500 text-sm leading-relaxed">El rediseño oficial Round Town Travel V2.0 creado por Agencia Costa Digital. Líderes en consultoría tecnológica.</p>
-                </div>
-                <div>
-                    <h4 class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-8">Navegación</h4>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li><a href="#" class="hover:text-white transition">Propiedades</a></li>
-                        <li><a href="#" class="hover:text-white transition">Servicios</a></li>
-                        <li><a href="#" class="hover:text-white transition">Experiencia</a></li>
-                        <li><a href="#" class="hover:text-white transition">Contacto</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-8">Legal</h4>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li><a href="#" class="hover:text-white transition">Privacidad</a></li>
-                        <li><a href="#" class="hover:text-white transition">Cookies</a></li>
-                        <li><a href="#" class="hover:text-white transition">Aviso Legal</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-brand-accent font-bold uppercase tracking-widest text-xs mb-8">Campaña</h4>
-                    <p class="text-slate-400 text-sm mb-6">Reciba nuestras actualizaciones premium de digitalización.</p>
-                    <div class="flex">
-                        <input type="text" placeholder="Su email" class="bg-white/5 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-brand-accent w-full text-white">
-                        <button class="bg-brand-accent px-6 py-3 text-xs font-bold uppercase">OK</button>
-                    </div>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-widest text-slate-500">
-                <div>&copy; 2025 Round Town Travel. TODOS LOS DERECHOS RESERVADOS.</div>
-                <div class="flex items-center gap-2">
-                    REDISEÑADO POR <span class="text-white font-bold">AGENCIA COSTA DIGITAL</span>
-                    <div class="w-1 h-1 rounded-full bg-brand-accent"></div>
-                    BENIDORM, ES
-                </div>
-            </div>
+    <footer class="bg-brand-dark text-white py-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="font-serif font-bold text-4xl mb-4">Round Town Travel</div>
+            <p class="text-slate-500 mb-12">Rediseño oficial creado por Agencia Costa Digital.</p>
+            <div class="text-slate-500 text-[10px] uppercase tracking-[0.5em]">&copy; 2025 TODOS LOS DERECHOS RESERVADOS</div>
         </div>
     </footer>
 
-    <!-- Overlay de Demo -->
-    <div class="fixed top-24 right-0 z-[110] bg-brand-accent text-white py-2 px-6 rounded-l-full shadow-2xl font-bold text-[10px] uppercase tracking-[0.2em] transform rotate-0 hover:-translate-x-2 transition duration-300 border-y border-l border-white/30">
-        Demo Propuesta V2.0
-    </div>
+    <!-- CSS/JS for Slider -->
+    <script>
+        const input = document.getElementById('slider-input');
+        const after = document.getElementById('after-image');
+        const handle = document.getElementById('handle');
+        const btn = document.getElementById('slider-btn');
+
+        input.addEventListener('input', (e) => {
+            const val = e.target.value;
+            after.style.width = val + '%';
+            handle.style.left = val + '%';
+            btn.style.left = val + '%';
+        });
+    </script>
 
 </body>
 </html>

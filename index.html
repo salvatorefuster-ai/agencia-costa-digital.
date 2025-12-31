@@ -4,48 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agencia Costa Blanca Digital | Arquitectos de Identidad Digital</title>
+    <title>Agencia Costa Blanca Digital | Centro de Evolución Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Outfit', 'sans-serif'], serif: ['Playfair Display', 'serif'] },
-                    colors: { dark: '#050505', gold: '#c5a358', slate: '#111111' }
-                }
-            }
-        }
-    </script>
     <style>
-        body { background-color: #050505; color: #ffffff; }
-        .hero-grain { background-image: url('https://grainy-gradients.vercel.app/noise.svg'); opacity: 0.05; pointer-events: none; }
-        .lux-gradient { background: radial-gradient(circle at 50% 50%, rgba(197, 163, 88, 0.08) 0%, transparent 70%); }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.2, 1, 0.3, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        body { background-color: #050505; color: #ffffff; font-family: sans-serif; }
+        .hero-gradient { background: radial-gradient(circle at 50% 50%, rgba(197, 163, 88, 0.1) 0%, transparent 70%); }
     </style>
 </head>
-<body class="antialiased selection:bg-gold selection:text-dark">
-    <div class="fixed inset-0 hero-grain z-0"></div>
-    <div class="lux-gradient absolute inset-0 z-0"></div>
-    <nav class="fixed w-full z-50 px-6 py-10 md:px-12 pointer-events-none">
-        <div class="max-w-screen-2xl mx-auto flex justify-between items-center pointer-events-auto">
-            <div class="font-serif font-bold text-2xl tracking-[0.2em] uppercase">Costa Blanca <span class="italic text-gold font-normal font-serif">Digital</span></div>
-            <a href="proyectos.html" class="bg-gold text-white px-10 py-4 rounded-full text-[9px] font-bold uppercase tracking-widest hover:scale-105 transition duration-500">Membresía VIP</a>
-        </div>
+<body class="antialiased overflow-x-hidden hero-gradient">
+    <nav class="p-10 flex justify-between items-center border-b border-white/5 bg-black/50 backdrop-blur-xl">
+        <div class="font-bold text-xl uppercase tracking-tighter">Agencia Costa Blanca Digital</div>
+        <a href="proyectos.html" class="bg-white text-black px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest">Catálogo de 100 Leads</a>
     </nav>
-    <header class="relative min-h-screen flex items-center justify-center pt-32 px-6 overflow-hidden">
-        <div class="relative z-10 text-center max-w-6xl">
-            <h1 class="reveal active font-serif text-6xl md:text-[10rem] font-bold mb-12 leading-[0.8] tracking-tight">Diseño <br> <span class="italic font-normal text-gold">Imbatible.</span></h1>
-            <p class="reveal active text-slate-400 text-lg md:text-3xl max-w-3xl mx-auto mb-20 font-light leading-relaxed">Arquitectos de identidad digital para las marcas que dominan Benidorm.</p>
-            <a href="proyectos.html" class="bg-gold text-white px-16 py-6 rounded-sm font-bold text-[11px] uppercase tracking-[0.4em] hover:bg-white hover:text-dark transition duration-700 shadow-2xl">Catálogo de Proyectos</a>
-        </div>
+    <header class="min-h-[80vh] flex flex-col items-center justify-center text-center px-6">
+        <h1 class="text-6xl md:text-9xl font-bold mb-8 tracking-tighter">100 <span class="text-blue-500">Transformaciones.</span></h1>
+        <p class="text-slate-400 text-xl max-w-2xl mb-12">Hemos seleccionado los 100 negocios con mayor potencial de Benidorm para una renovación digital completa.</p>
+        <a href="proyectos.html" class="bg-blue-600 px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-blue-500 transition shadow-2xl">Ver Mi Prototipo</a>
     </header>
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
 </body>
 </html>

@@ -1,77 +1,59 @@
 
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Importas | Rediseño Exclusivo 2025</title>
+    <title>Nos Importas | Propuesta de Rediseño</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { brand: { primary: '#0f172a', accent: '#c5a358', secondary: '#1e293b' } },
-                    fontFamily: { display: ['Playfair Display', 'serif'], sans: ['Outfit', 'sans-serif'], modern: ['Space Grotesk', 'sans-serif'] }
-                }
-            }
-        }
+        tailwind.config = { theme: { extend: { colors: { brand: { primary: '#080c14', accent: '#c5a358', secondary: '#1e293b' } } } } }
     </script>
     <style>
-        .mesh-gradient { background-color: #0f172a; background-image: radial-gradient(at 0% 0%, #c5a35815 0, transparent 50%), radial-gradient(at 100% 0%, #c5a35820 0, transparent 50%); }
-        .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.2, 1, 0.3, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .comparison-slider { position: relative; width: 100%; height: 75vh; overflow: hidden; border-radius: 20px; box-shadow: 0 50px 100px -20px rgba(0,0,0,0.7); }
+        .comparison-slider { position: relative; width: 100%; height: 75vh; overflow: hidden; border-radius: 20px; box-shadow: 0 40px 80px rgba(0,0,0,0.5); }
         .comparison-slider .image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center top; }
-        .comparison-slider .before { background-image: url('./old.png'); z-index: 1; filter: grayscale(80%); }
+        .comparison-slider .before { background-image: url('./old.png'); z-index: 1; filter: grayscale(100%) blur(2px); opacity: 0.7; }
         .comparison-slider .after { background-image: url('./new_preview.png'); z-index: 2; width: 50%; border-right: 4px solid #c5a358; }
         .comparison-slider input[type="range"] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 30; appearance: none; background: transparent; cursor: ew-resize; margin: 0; }
-        .comparison-slider input::-webkit-slider-thumb { appearance: none; width: 4px; height: 100vh; background: transparent; }
-        .slider-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; background: #c5a358; z-index: 20; pointer-events: none; transform: translateX(-50%); }
-        .slider-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; background: white; color: #0f172a; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 25; pointer-events: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); }
+        .slider-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; background: #c5a358; z-index: 20; transform: translateX(-50%); pointer-events: none; }
+        .slider-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; background: white; color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 25; font-weight: bold; }
     </style>
 </head>
-<body class="bg-brand-primary text-white font-sans antialiased overflow-x-hidden">
-    <nav class="fixed w-full z-[100] px-6 py-8 pointer-events-none">
-        <div class="max-w-screen-2xl mx-auto flex justify-between items-center pointer-events-auto">
-            <a href="../proyectos.html" class="glass px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-4 hover:bg-white hover:text-black transition duration-500">
-                <i class="fa-solid fa-arrow-left"></i> Directorio
-            </a>
-            <button class="bg-brand-accent text-white px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:scale-105 transition duration-500">Contratar Rediseño</button>
-        </div>
+<body class="bg-brand-primary text-white font-sans antialiased">
+    <nav class="p-10 flex justify-between items-center bg-black/30 backdrop-blur-md">
+        <a href="../proyectos.html" class="text-xs font-bold uppercase tracking-widest">&larr; Volver</a>
+        <div class="font-bold">Nos Importas</div>
+        <div class="hidden md:block text-[9px] uppercase tracking-widest text-brand-accent">Lead Prioritario V5.5</div>
     </nav>
-    <section id="analisis" class="min-h-screen relative flex items-center justify-center pt-32 pb-20 px-6 overflow-hidden mesh-gradient">
-        <div class="relative z-10 w-full max-w-7xl">
-            <div class="reveal active text-center mb-16">
-                <span class="text-brand-accent font-bold uppercase tracking-[0.8em] text-[10px] mb-8 block">Future Vision Studio</span>
-                <h1 class="font-display text-7xl md:text-[8rem] font-bold mb-8 leading-none">Nos Importas... <br> <span class="italic font-normal opacity-50">V5.0</span></h1>
-                <p class="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl font-light mb-12">Transformación radical para <strong>Nos Importas</strong>. Estética de vanguardia y rendimiento extremo.</p>
+    <section class="max-w-7xl mx-auto px-6 py-20 text-center">
+        <h1 class="text-7xl md:text-9xl font-bold mb-10 tracking-tighter">Adiós a lo <br> <span class="text-brand-accent italic font-serif">Antiguo.</span></h1>
+        <p class="text-slate-400 text-xl max-w-2xl mx-auto mb-20 italic">"Su negocio genera miles de euros. Su web parece de otra década. Hemos corregido eso."</p>
+        <div class="comparison-slider mb-32">
+            <div class="image before"></div>
+            <div class="image after" id="after-image"></div>
+            <input type="range" min="0" max="100" value="50" id="slider-input">
+            <div class="slider-handle" id="handle"></div>
+            <div class="slider-btn" id="slider-btn">&harr;</div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="bg-white/5 p-12 rounded-[40px] border border-white/5 hover:border-brand-accent/30 transition">
+                <div class="text-brand-accent text-3xl mb-4 font-bold">10x Impacto</div>
+                <p class="text-slate-400 text-sm italic">Diseño emocional que detiene el scroll y genera confianza inmediata.</p>
             </div>
-            <div class="comparison-slider reveal active">
-                <div class="image before"></div>
-                <div class="image after" id="after-image"></div>
-                <input type="range" min="0" max="100" value="50" id="slider-input">
-                <div class="slider-handle" id="handle"></div>
-                <div class="slider-btn" id="slider-btn"><i class="fa-solid fa-arrows-left-right"></i></div>
+            <div class="bg-white/5 p-12 rounded-[40px] border border-white/5 hover:border-brand-accent/30 transition">
+                <div class="text-brand-accent text-3xl mb-4 font-bold">0.8s Carga</div>
+                <p class="text-slate-400 text-sm italic">Tecnología de última generación compatible con el SEO de 2025.</p>
+            </div>
+            <div class="bg-white/5 p-12 rounded-[40px] border border-white/5 hover:border-brand-accent/30 transition">
+                <div class="text-brand-accent text-3xl mb-4 font-bold">VIP Design</div>
+                <p class="text-slate-400 text-sm italic">Personalizado para la demografía de alto poder adquisitivo de Benidorm.</p>
             </div>
         </div>
     </section>
-    <section class="py-40 px-6 bg-brand-primary">
-        <div class="max-w-screen-2xl mx-auto grid lg:grid-cols-2 gap-32 items-center">
-            <div class="reveal">
-                <h2 class="font-display text-6xl md:text-8xl font-bold mb-12 italic leading-none">Mejora <br> <span class="not-italic text-brand-accent">Sustancial.</span></h2>
-                <p class="text-slate-400 text-xl font-light leading-relaxed mb-12">Nuestra reingeniería para Nos Importas garantiza un impacto visual 10x superior al actual.</p>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="glass p-8 rounded-3xl"><div class="text-3xl text-brand-accent mb-2">0.8s</div><div class="text-[9px] uppercase tracking-widest text-slate-500">Carga Ultra-Rápida</div></div>
-                    <div class="glass p-8 rounded-3xl"><div class="text-3xl text-brand-accent mb-2">100%</div><div class="text-[9px] uppercase tracking-widest text-slate-500">Mobile Fidelity</div></div>
-                </div>
-            </div>
-            <div class="reveal relative aspect-square rounded-[40px] overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" class="w-full h-full object-cover grayscale">
-            </div>
-        </div>
+    <section class="py-40 bg-brand-accent text-brand-primary text-center">
+        <h2 class="text-6xl md:text-8xl font-black mb-10 tracking-tighter uppercase">¿Empezamos?</h2>
+        <a href="https://wa.me/34663036070" class="bg-brand-primary text-white px-16 py-6 rounded-full font-bold uppercase tracking-widest inline-block scale-110">Activar mi Rediseño</a>
     </section>
     <script>
         const input = document.getElementById('slider-input');
@@ -84,8 +66,6 @@
             handle.style.left = val + '%';
             btn.style.left = val + '%';
         });
-        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); }); }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
